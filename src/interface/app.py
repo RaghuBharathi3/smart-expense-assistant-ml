@@ -1,4 +1,4 @@
-"""Enterprise Gradio chatbot and financial analytics interface."""
+"""Apple-level minimal Gradio interface for Smart Expense Assistant."""
 
 from __future__ import annotations
 
@@ -32,60 +32,142 @@ SAMPLE_QUERIES = [
 ]
 
 CUSTOM_CSS = """
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 .gradio-container {
-    max-width: 1200px !important;
+    max-width: 1180px !important;
     margin: 0 auto !important;
-    background-color: #F9FAFB !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    background-color: #F5F5F7 !important;
+    color: #1D1D1F !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", system-ui, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
 }
-.ea-header {
-    border-bottom: 1px solid #E5E7EB;
-    padding: 12px 0 14px 0;
-    margin-bottom: 12px;
+
+.ea-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 0 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 14px;
 }
-.ea-header h1 {
-    font-size: 1.4rem;
+
+.ea-title {
+    font-size: 1.38rem;
     font-weight: 600;
-    color: #111827;
+    color: #1D1D1F;
+    letter-spacing: -0.02em;
     margin: 0;
-    letter-spacing: -0.01em;
 }
-.ea-header p {
-    font-size: 0.88rem;
-    color: #4B5563;
-    margin: 4px 0 0 0;
+
+.ea-subtitle {
+    font-size: 0.86rem;
+    color: #6E6E73;
+    margin: 3px 0 0 0;
 }
+
+.ea-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: #1D1D1F;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.ea-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #0F766E;
+    display: inline-block;
+}
+
 .ea-kpi-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 14px;
+    margin: 4px 0 16px 0;
+    animation: fadeSlideUp 0.22s ease-out;
 }
+
 .ea-kpi-card {
     background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 6px;
-    padding: 14px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: transform 0.18s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.18s ease;
 }
+
+.ea-kpi-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 .ea-kpi-label {
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: #4B5563;
-    margin-bottom: 4px;
+    color: #6E6E73;
+    margin-bottom: 6px;
 }
+
 .ea-kpi-value {
-    font-size: 1.25rem;
+    font-size: 1.32rem;
     font-weight: 600;
-    color: #111827;
+    color: #1D1D1F;
     font-variant-numeric: tabular-nums;
+    letter-spacing: -0.015em;
 }
+
 .ea-kpi-sub {
-    font-size: 0.75rem;
-    color: #6B7280;
-    margin-top: 3px;
+    font-size: 0.76rem;
+    color: #6E6E73;
+    margin-top: 4px;
 }
+
+.ea-feedback {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.84rem;
+    color: #1D1D1F;
+    animation: fadeSlideUp 0.18s ease-out;
+}
+
+.ea-feedback.error {
+    background: #FEF2F2;
+    border-color: #FECACA;
+    color: #991B1B;
+}
+
+button {
+    border-radius: 8px !important;
+    transition: transform 0.12s ease, background-color 0.15s ease, border-color 0.15s ease !important;
+}
+
+button:active {
+    transform: scale(0.985) !important;
+}
+
+button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #0066CC !important;
+    outline-offset: 2px !important;
+}
+
 @media (max-width: 768px) {
     .ea-kpi-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -118,7 +200,7 @@ def _build_kpi_html(df: pd.DataFrame) -> str:
         <div class="ea-kpi-card">
             <div class="ea-kpi-label">Total Expenses</div>
             <div class="ea-kpi-value">{format_inr(total)}</div>
-            <div class="ea-kpi-sub">{len(df)} transactions</div>
+            <div class="ea-kpi-sub">{len(df):,} recorded entries</div>
         </div>
         <div class="ea-kpi-card">
             <div class="ea-kpi-label">Latest Month ({latest_period.strftime('%b %Y')})</div>
@@ -142,14 +224,14 @@ def _build_kpi_html(df: pd.DataFrame) -> str:
 def handle_chat_query(
     user_message: str,
     history: list[dict[str, str]] | None,
-) -> tuple[str, list[dict[str, str]], pd.DataFrame, Any]:
-    """Process User -> LLM Router -> Backend Router -> LLM Response and update UI."""
+) -> tuple[str, list[dict[str, str]], Any, Any, str, str]:
+    """Process User -> LLM Router -> Backend Router -> LLM Response with progressive disclosure."""
     chat_history = list(history or [])
     empty_df = pd.DataFrame(columns=["expense_id", "description", "amount", "date", "category"])
 
     if not isinstance(user_message, str) or not user_message.strip():
-        chat_history.append({"role": "assistant", "content": "Please enter a question or expense description."})
-        return "", chat_history, empty_df, None
+        feedback = "<div class='ea-feedback error'>Please enter a question or expense description.</div>"
+        return "", chat_history, gr.update(visible=False, value=empty_df), gr.update(visible=False, value=None), feedback, ""
 
     query = user_message.strip()
     routed = route_query(query)
@@ -157,26 +239,36 @@ def handle_chat_query(
         reply = routed.get("error", "Unsupported query.")
         chat_history.append({"role": "user", "content": query})
         chat_history.append({"role": "assistant", "content": reply})
-        return "", chat_history, empty_df, None
+        feedback = f"<div class='ea-feedback error'>{reply}</div>"
+        return "", chat_history, gr.update(visible=False, value=empty_df), gr.update(visible=False, value=None), feedback, query
 
     tool_output = execute_tool_call(routed)
     answer = generate_response(tool_output)
     chat_history.append({"role": "user", "content": query})
     chat_history.append({"role": "assistant", "content": answer})
 
-    table_out = empty_df
-    chart_out = None
-    if tool_output.get("ok"):
-        fn = tool_output.get("function")
-        res = tool_output.get("result")
-        if fn == "get_expenses" and isinstance(res, list) and res:
-            table_out = pd.DataFrame(res)
-        elif fn == "get_category_breakdown" and isinstance(res, dict):
-            chart_out = breakdown_dict_chart(res, "Category Breakdown")
-        elif fn == "compare_months" and isinstance(res, dict):
-            chart_out = monthly_comparison_chart(_load_df(), int(res["month_a"]), int(res["month_b"]))
+    if not tool_output.get("ok"):
+        feedback = f"<div class='ea-feedback error'>{answer}</div>"
+        return "", chat_history, gr.update(visible=False, value=empty_df), gr.update(visible=False, value=None), feedback, query
 
-    return "", chat_history, table_out, chart_out
+    fn = tool_output.get("function")
+    res = tool_output.get("result")
+    feedback = f"<div class='ea-feedback'>Completed <b>{fn}</b> cleanly.</div>"
+
+    table_update: Any = gr.update(visible=False, value=empty_df)
+    chart_update: Any = gr.update(visible=False, value=None)
+
+    if fn == "get_expenses" and isinstance(res, list) and res:
+        table_update = gr.update(visible=True, value=pd.DataFrame(res))
+    elif fn == "get_category_breakdown" and isinstance(res, dict):
+        chart_update = gr.update(visible=True, value=breakdown_dict_chart(res, "Category Breakdown"))
+    elif fn == "compare_months" and isinstance(res, dict):
+        chart_update = gr.update(
+            visible=True,
+            value=monthly_comparison_chart(_load_df(), int(res["month_a"]), int(res["month_b"])),
+        )
+
+    return "", chat_history, table_update, chart_update, feedback, query
 
 
 def filter_ledger(category: str, search_text: str) -> pd.DataFrame:
@@ -207,10 +299,12 @@ def handle_add_expense(
             "category": cat_arg,
         },
     })
-    status_msg = generate_response(tool_output)
+    msg = generate_response(tool_output)
+    css_cls = "ea-feedback" if tool_output.get("ok") else "ea-feedback error"
+    status_html = f"<div class='{css_cls}'>{msg}</div>"
     df = _load_df()
     return (
-        status_msg,
+        status_html,
         _build_kpi_html(df),
         category_distribution_chart(df),
         monthly_trend_chart(df),
@@ -225,11 +319,19 @@ def create_app() -> gr.Blocks:
     df_init = _load_df()
 
     with gr.Blocks(title="Smart Expense Assistant") as demo:
+        last_query_state = gr.State("")
+
         gr.HTML(
-            """
-            <div class="ea-header">
-                <h1>Smart Expense Assistant</h1>
-                <p>Conversational expense intelligence, ML categorization, and INR (₹) analytics</p>
+            f"""
+            <div class="ea-topbar">
+                <div>
+                    <h1 class="ea-title">Smart Expense Assistant</h1>
+                    <p class="ea-subtitle">Natural-language expense intelligence, ML categorization & INR (₹) analytics</p>
+                </div>
+                <div class="ea-status-pill">
+                    <span class="ea-dot"></span>
+                    <span>{len(df_init):,} Expenses · ML Classifier Ready</span>
+                </div>
             </div>
             """
         )
@@ -240,18 +342,21 @@ def create_app() -> gr.Blocks:
                     with gr.Column(scale=3):
                         chatbot = gr.Chatbot(
                             label="Conversation",
-                            height=420,
+                            height=430,
+                            placeholder="Ask a question about your expenses or pick a prompt below.",
                         )
+                        feedback_html = gr.HTML("")
                         with gr.Row():
                             query_box = gr.Textbox(
-                                placeholder="Ask about your expenses (e.g., 'How much did I spend on food in November?')",
+                                placeholder="Ask anything (e.g. 'How much did I spend on food in November?')",
                                 show_label=False,
-                                scale=5,
+                                scale=6,
                             )
                             send_btn = gr.Button("Send", variant="primary", scale=1)
+                            retry_btn = gr.Button("Retry", scale=1)
                             clear_btn = gr.Button("Clear", scale=1)
 
-                        gr.Markdown("**Sample Queries**")
+                        gr.Markdown("**Quick Prompts**")
                         sample_btns: list[tuple[str, gr.Button]] = []
                         with gr.Row():
                             for q in SAMPLE_QUERIES[:3]:
@@ -259,36 +364,30 @@ def create_app() -> gr.Blocks:
                         with gr.Row():
                             for q in SAMPLE_QUERIES[3:]:
                                 sample_btns.append((q, gr.Button(q, size="sm")))
+
                     with gr.Column(scale=2):
-                        chat_chart = gr.Plot(label="Query Visualization")
+                        chat_chart = gr.Plot(label="Visual Breakdown", visible=False)
                         chat_table = gr.Dataframe(
                             label="Matching Transactions",
                             interactive=False,
                             wrap=True,
+                            visible=False,
                         )
 
+                outputs_chat = [query_box, chatbot, chat_table, chat_chart, feedback_html, last_query_state]
+                send_btn.click(fn=handle_chat_query, inputs=[query_box, chatbot], outputs=outputs_chat)
+                query_box.submit(fn=handle_chat_query, inputs=[query_box, chatbot], outputs=outputs_chat)
+                retry_btn.click(fn=handle_chat_query, inputs=[last_query_state, chatbot], outputs=outputs_chat)
+                clear_btn.click(
+                    fn=lambda: ([], gr.update(visible=False, value=pd.DataFrame()), gr.update(visible=False, value=None), "", ""),
+                    outputs=[chatbot, chat_table, chat_chart, feedback_html, last_query_state],
+                )
                 for q_text, q_btn in sample_btns:
                     q_btn.click(
                         fn=lambda h, text=q_text: handle_chat_query(text, h),
                         inputs=[chatbot],
-                        outputs=[query_box, chatbot, chat_table, chat_chart],
+                        outputs=outputs_chat,
                     )
-
-                # Wire chat controls cleanly to all outputs
-                send_btn.click(
-                    fn=handle_chat_query,
-                    inputs=[query_box, chatbot],
-                    outputs=[query_box, chatbot, chat_table, chat_chart],
-                )
-                query_box.submit(
-                    fn=handle_chat_query,
-                    inputs=[query_box, chatbot],
-                    outputs=[query_box, chatbot, chat_table, chat_chart],
-                )
-                clear_btn.click(
-                    fn=lambda: ([], pd.DataFrame(), None),
-                    outputs=[chatbot, chat_table, chat_chart],
-                )
 
             with gr.Tab("Analytics Dashboard"):
                 kpi_html = gr.HTML(_build_kpi_html(df_init))
@@ -327,10 +426,10 @@ def create_app() -> gr.Blocks:
                     cat_filter = gr.Dropdown(
                         choices=["All", *ALLOWED_CATEGORIES],
                         value="All",
-                        label="Filter Category",
+                        label="Category",
                     )
                     search_filter = gr.Textbox(
-                        placeholder="Search description (e.g., Swiggy, Uber, electricity)...",
+                        placeholder="Search description (e.g. Swiggy, Uber, electricity)...",
                         label="Search",
                     )
                 ledger_table = gr.Dataframe(value=df_init.head(150), interactive=False, wrap=True)
@@ -338,9 +437,9 @@ def create_app() -> gr.Blocks:
                 search_filter.change(fn=filter_ledger, inputs=[cat_filter, search_filter], outputs=[ledger_table])
 
             with gr.Tab("Add Expense"):
-                gr.Markdown("Add a validated expense to `data/runtime/expenses.csv` (seed CSV remains read-only).")
+                gr.Markdown("Record a new expense into `data/runtime/expenses.csv` (seed data stays read-only).")
                 with gr.Row():
-                    add_desc = gr.Textbox(label="Description", placeholder="e.g., Uber ride to office")
+                    add_desc = gr.Textbox(label="Description", placeholder="e.g. Uber ride to office")
                     add_amt = gr.Number(label="Amount (₹)", value=250.0, minimum=1.0)
                 with gr.Row():
                     add_date = gr.Textbox(label="Date (YYYY-MM-DD)", value=date.today().isoformat())
@@ -349,8 +448,10 @@ def create_app() -> gr.Blocks:
                         value="Auto (ML Classifier)",
                         label="Category",
                     )
-                add_btn = gr.Button("Add Expense", variant="primary")
-                add_status = gr.Markdown()
+                with gr.Row():
+                    add_btn = gr.Button("Add Expense", variant="primary")
+                    reset_btn = gr.Button("Reset Form")
+                add_status = gr.HTML()
 
                 add_btn.click(
                     fn=handle_add_expense,
@@ -365,6 +466,10 @@ def create_app() -> gr.Blocks:
                         ledger_table,
                     ],
                 )
+                reset_btn.click(
+                    fn=lambda: ("", 250.0, date.today().isoformat(), "Auto (ML Classifier)", ""),
+                    outputs=[add_desc, add_amt, add_date, add_cat, add_status],
+                )
 
     return demo
 
@@ -372,9 +477,8 @@ def create_app() -> gr.Blocks:
 def launch_app(share: bool = False) -> None:
     """Launch the Gradio application (set share=True in Google Colab)."""
     theme = gr.themes.Base(
-        primary_hue=gr.themes.colors.slate,
+        primary_hue=gr.themes.colors.blue,
         neutral_hue=gr.themes.colors.gray,
-        font=gr.themes.GoogleFont("Inter"),
     )
     app = create_app()
     app.launch(share=share, theme=theme, css=CUSTOM_CSS)

@@ -49,9 +49,18 @@ def test_interface_app_renders() -> None:
     app = create_app()
     assert app is not None
 
-    _, hist, table, _ = handle_chat_query("Show all my expenses in November.", [])
+    _, hist, table_upd, _, feedback, _ = handle_chat_query("Show all my expenses in November.", [])
     assert len(hist) == 2
-    assert not table.empty
+    assert table_upd["visible"] is True
+    assert not table_upd["value"].empty
+    assert "Completed" in feedback
+
+    _, hist2, _, chart_upd, _, _ = handle_chat_query("Compare my expenses between October and November.", [])
+    assert len(hist2) == 2
+    assert chart_upd["visible"] is True
+
+    _, _, _, _, err_feedback, _ = handle_chat_query("   ", [])
+    assert "error" in err_feedback
 
     filtered = filter_ledger("Food", "")
     assert not filtered.empty
