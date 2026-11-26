@@ -1,0 +1,1201 @@
+expense_id,description,amount,date,category
+EXP-0001,Purchased USB-C cable at Croma store,2909.21,2025-05-07,Shopping
+EXP-0002,Quick pasta takeaway from Cream Stone,382.59,2025-07-23,Food
+EXP-0003,Bought bedsheet set from DMart,1018.91,2025-12-25,Shopping
+EXP-0004,Two-wheeler service and chain lube at T Nagar,475.66,2025-01-01,Travel
+EXP-0005,Bought bath towels from DMart today,1295.84,2025-05-11,Shopping
+EXP-0006,Zomato order for pasta and beverages,847.39,2026-02-23,Food
+EXP-0007,Vi mobile recharge for November,333.08,2025-08-02,Utilities
+EXP-0008,Purchased phone case from local electronics shop,1437.87,2025-03-22,Shopping
+EXP-0009,Bought gift power bank for anniversary yesterday,506.81,2025-06-26,Shopping
+EXP-0010,BMTC bus pass monthly renewal via UPI,1260.5,2025-06-01,Travel
+EXP-0011,IRCTC train ticket booking to Coimbatore today,2667.77,2026-01-21,Travel
+EXP-0012,Paid for electric kettle at Reliance Digital via debit card,2724.47,2025-04-24,Shopping
+EXP-0013,Paid cab bill online after trip to Kempegowda terminal,305.59,2026-02-21,Travel
+EXP-0014,Tata Play DTH recharge online,298.49,2025-10-14,Utilities
+EXP-0015,Street food sandwich at Jayanagar market,207.21,2026-02-25,Food
+EXP-0016,Chennai Metro ticket to office,65.84,2025-07-30,Travel
+EXP-0017,Dessert and ice cream order from Chai Point,319.94,2025-07-03,Food
+EXP-0018,Paid online for wireless mouse order,3673.62,2025-06-19,Shopping
+EXP-0019,Purchased power bank on Amazon,2300.49,2025-08-25,Shopping
+EXP-0020,HP Gas cylinder refill payment via UPI,982.02,2026-03-12,Utilities
+EXP-0021,Street food idli vada at Koramangala market,176.65,2026-02-27,Food
+EXP-0022,Monthly electricity bill payment via GPay this morning,1314.7,2025-04-06,Utilities
+EXP-0023,Paid for electric kettle at Reliance Digital,5896.51,2025-06-30,Shopping
+EXP-0024,Petrol refill for bike at HPCL,544.99,2025-04-28,Travel
+EXP-0025,Booked ride on Paytm Travel to Jaipur,1793.78,2026-01-25,Travel
+EXP-0026,Flight ticket booking to Coimbatore,9097.68,2025-02-12,Travel
+EXP-0027,Bought formal shirt at Westside Andheri,829.83,2025-10-21,Shopping
+EXP-0028,Purchased SSD drive on Amazon,1913.72,2025-08-28,Shopping
+EXP-0029,TANGEDCO electricity bill for March,3498.64,2025-08-08,Utilities
+EXP-0030,Weekend biryani order from KFC,552.72,2025-09-08,Food
+EXP-0031,Quick chicken biryani takeaway from Barbeque Nation using credit card,462.03,2026-01-31,Food
+EXP-0032,Street food cold coffee at Andheri market,224.53,2026-03-26,Food
+EXP-0033,Lunch shawarma at Dominos,180.7,2025-03-20,Food
+EXP-0034,Bought backpack from Myntra,891.73,2025-01-09,Shopping
+EXP-0035,Local suburban train pass renewal this morning,378.76,2025-03-23,Travel
+EXP-0036,Purchased water bottle at Croma store,10924.5,2025-08-11,Shopping
+EXP-0037,Rapido bike taxi to Electronic City,52.49,2025-06-30,Travel
+EXP-0038,Paid for earbuds at Reliance Digital,4418.6,2025-01-07,Shopping
+EXP-0039,JioFiber internet subscription renewal,1238.22,2025-02-03,Utilities
+EXP-0040,Ola Outstation trip to Chennai,4921.28,2025-07-11,Travel
+EXP-0041,Two-wheeler service and chain lube at Whitefield,660.13,2025-11-21,Travel
+EXP-0042,Ola cab booking from Andheri to bus stand,486.94,2026-03-10,Travel
+EXP-0043,Monthly electricity bill payment via CRED for personal expense,4165.88,2025-04-25,Utilities
+EXP-0044,Vi mobile recharge for January yesterday,519.19,2025-06-22,Utilities
+EXP-0045,Lunch margherita pizza at Cream Stone,583.52,2025-06-30,Food
+EXP-0046,TANGEDCO electricity bill for September for personal expense,3825.33,2025-08-22,Utilities
+EXP-0047,Purchased bluetooth speaker from local electronics shop today,2285.23,2025-10-27,Shopping
+EXP-0048,Paid bill for team lunch at Belgian Waffle via UPI,2293.84,2025-12-28,Food
+EXP-0049,Paid for laptop backpack at Reliance Digital,6519.58,2025-03-17,Shopping
+EXP-0050,Paid for trimmer at Reliance Digital,3347.05,2025-01-15,Shopping
+EXP-0051,Street food shawarma at Adyar market this morning,89.79,2025-05-05,Food
+EXP-0052,Metro smart card recharge at HSR Layout station via UPI,679.67,2025-07-05,Travel
+EXP-0053,Ordered cooking gas refill online via PhonePe,1088.09,2026-02-24,Utilities
+EXP-0054,Street food fried rice at Salt Lake market,85.82,2025-03-12,Food
+EXP-0055,Bought backpack from Myntra this morning,2757.38,2025-01-20,Shopping
+EXP-0056,Dessert and ice cream order from Biryani Blues,481.4,2026-02-16,Food
+EXP-0057,Monthly Prime shopping delivery order of non-stick pan for personal expense,865.26,2025-08-07,Shopping
+EXP-0058,Fresh juice and chicken biryani at Koramangala cafe this morning,287.83,2025-06-15,Food
+EXP-0059,Prepaid electricity meter recharge today,1242.51,2025-08-03,Utilities
+EXP-0060,TANGEDCO electricity bill for March using credit card,1139.08,2025-05-15,Utilities
+EXP-0061,Ordered cold coffee online via Zomato today,424.85,2025-01-31,Food
+EXP-0062,Tata Play DTH recharge online today,738.06,2025-07-09,Utilities
+EXP-0063,Paid bill for team lunch at Biryani Blues,2028.63,2025-12-26,Food
+EXP-0064,Monthly electricity bill payment via GPay,1791.44,2026-03-27,Utilities
+EXP-0065,Bought gift tripod stand for weekend gathering using credit card,1608.93,2025-06-08,Shopping
+EXP-0066,Monthly electricity bill payment via PhonePe yesterday,3705.84,2025-07-20,Utilities
+EXP-0067,Diesel fuel payment at HPCL,3120.74,2025-08-04,Travel
+EXP-0068,Purchased trimmer on Amazon via UPI,1156.32,2025-07-01,Shopping
+EXP-0069,Paid online for filter coffee delivery from Swiggy,324.84,2025-06-18,Food
+EXP-0070,Chennai Metro ticket to airport,54.35,2025-06-19,Travel
+EXP-0071,Weekend biryani order from McDonalds today,597.53,2025-10-27,Food
+EXP-0072,Street food masala dosa at Gachibowli market,67.37,2025-11-01,Food
+EXP-0073,Auto rickshaw fare from Indiranagar to MG Road,182.96,2025-08-28,Travel
+EXP-0074,Rapido bike taxi to Central Station yesterday,118.19,2025-11-23,Travel
+EXP-0075,TANGEDCO electricity bill for August via UPI,1141.59,2026-01-01,Utilities
+EXP-0076,Bakery cake and pastries for family dinner,844.65,2025-03-14,Food
+EXP-0077,Ordered face wash from Amazon today,347.82,2025-11-01,Shopping
+EXP-0078,TANGEDCO electricity bill for August today,2682.94,2025-07-18,Utilities
+EXP-0079,Two-wheeler service and chain lube at Salt Lake using credit card,488.71,2025-03-22,Travel
+EXP-0080,Monthly metro commute pass payment yesterday,771.63,2025-09-20,Travel
+EXP-0081,Decathlon purchase of football yesterday,2936.77,2025-12-25,Shopping
+EXP-0082,Auto rickshaw fare from Anna Nagar to IT Park,170.42,2025-08-16,Travel
+EXP-0083,Vi mobile recharge for September yesterday,301.36,2025-06-26,Utilities
+EXP-0084,Morning coffee and chole bhature at Third Wave Coffee,327.42,2025-02-11,Food
+EXP-0085,Decathlon purchase of badminton racket,2443.96,2025-04-04,Shopping
+EXP-0086,Bought cotton t-shirt from Myntra,2123.51,2025-05-18,Shopping
+EXP-0087,Prepaid electricity meter recharge this morning,2380.04,2025-11-22,Utilities
+EXP-0088,Bought running shoes from Myntra,1344.25,2025-07-27,Shopping
+EXP-0089,Ola cab booking from Kothrud to Tambaram yesterday,364.43,2025-04-15,Travel
+EXP-0090,Purchased earbuds at Croma store this morning,9569.15,2025-07-26,Shopping
+EXP-0091,Local suburban train pass renewal via UPI,386.29,2025-06-07,Travel
+EXP-0092,Bought hoodie during weekend mall visit,2202.49,2025-08-09,Shopping
+EXP-0093,Decathlon purchase of dumbbells,711.66,2026-01-16,Shopping
+EXP-0094,Auto rickshaw fare from T Nagar to IT Park,73.17,2025-04-24,Travel
+EXP-0095,Monthly Prime shopping delivery order of kitchen organizer,382.24,2025-03-13,Shopping
+EXP-0096,Auto rickshaw fare from Jayanagar to IT Park,122.1,2025-02-13,Travel
+EXP-0097,Ordered face wash from Amazon via debit card,636.44,2025-04-28,Shopping
+EXP-0098,Bought formal shirt from Myntra,2703.98,2026-02-25,Shopping
+EXP-0099,ACT Fibernet broadband monthly bill,1221.02,2025-12-07,Utilities
+EXP-0100,TANGEDCO electricity bill for May,3749.35,2025-02-26,Utilities
+EXP-0101,Apartment maintenance and utility charge via debit card,2986.52,2025-10-06,Utilities
+EXP-0102,Paid for phone case at Reliance Digital today,1863.81,2025-07-30,Shopping
+EXP-0103,Petrol refill for bike at IndianOil via debit card,455.52,2025-01-05,Travel
+EXP-0104,Bought gift power bank for weekend gathering for personal expense,830.27,2026-03-04,Shopping
+EXP-0105,Flipkart Big Billion sale purchase of smartwatch via debit card,944.01,2025-12-19,Shopping
+EXP-0106,Ordered shampoo from Amazon via UPI,496.94,2026-03-24,Shopping
+EXP-0107,Bought running shoes at Westside Whitefield,2805.21,2026-03-15,Shopping
+EXP-0108,Airtel postpaid mobile recharge via UPI,866.38,2026-02-25,Utilities
+EXP-0109,Quick sandwich takeaway from Subway,408.07,2025-10-05,Food
+EXP-0110,Quick fried rice takeaway from Belgian Waffle,450.21,2025-06-13,Food
+EXP-0111,Evening snacks and tea near T Nagar,180.18,2025-07-05,Food
+EXP-0112,Parking fee at bus stand today,52.81,2025-06-03,Travel
+EXP-0113,Ola cab booking from Kothrud to airport,469.71,2025-12-22,Travel
+EXP-0114,Ordered cooking gas refill online via GPay today,1146.58,2026-01-26,Utilities
+EXP-0115,Tata Play DTH recharge online this morning,474.93,2026-01-18,Utilities
+EXP-0116,Ola cab booking from Guindy to office,491.38,2025-12-18,Travel
+EXP-0117,Ordered hair serum from Amazon,582.56,2025-07-13,Shopping
+EXP-0118,Paid bill for team lunch at Cream Stone,1422.65,2025-10-16,Food
+EXP-0119,TANGEDCO electricity bill for August this morning,1213.0,2025-07-08,Utilities
+EXP-0120,Monthly electricity bill payment via Amazon Pay this morning,2427.72,2026-02-02,Utilities
+EXP-0121,Bought running shoes during weekend mall visit via UPI,2258.2,2025-01-25,Shopping
+EXP-0122,Bought non-stick pan from DMart today,2413.23,2025-07-30,Shopping
+EXP-0123,Morning coffee and fried rice at Barbeque Nation,117.87,2025-11-01,Food
+EXP-0124,Vi mobile recharge for March yesterday,333.44,2025-11-24,Utilities
+EXP-0125,Purchased trimmer on Amazon,1191.45,2025-02-08,Shopping
+EXP-0126,HP Gas cylinder refill payment for personal expense,1130.78,2026-03-22,Utilities
+EXP-0127,Late night paneer wrap delivery via EatSure this morning,615.19,2025-01-27,Food
+EXP-0128,Airtel postpaid mobile recharge,435.14,2026-01-20,Utilities
+EXP-0129,Vi mobile recharge for June via UPI,318.19,2025-01-07,Utilities
+EXP-0130,Bought gift tripod stand for family dinner for personal expense,526.62,2025-09-23,Shopping
+EXP-0131,IRCTC train ticket booking to Bengaluru for personal expense,2776.29,2025-08-04,Travel
+EXP-0132,BSNL landline and broadband bill for personal expense,1010.21,2026-02-21,Utilities
+EXP-0133,Rapido bike taxi to bus stand this morning,46.78,2026-03-15,Travel
+EXP-0134,Ordered pizza online from Third Wave Coffee using credit card,742.86,2026-01-25,Food
+EXP-0135,Ordered pizza online from Sangeetha Veg,399.0,2025-12-25,Food
+EXP-0136,Vi mobile recharge for June,558.0,2025-12-28,Utilities
+EXP-0137,Bought winter jacket from Myntra,2572.6,2025-10-31,Shopping
+EXP-0138,Airport cab pickup via Uber via debit card,667.63,2025-12-01,Travel
+EXP-0139,Bought bath towels from DMart,2515.39,2026-03-15,Shopping
+EXP-0140,Rapido bike taxi to airport,65.27,2026-01-19,Travel
+EXP-0141,Diesel fuel payment at BPCL,2532.66,2026-03-12,Travel
+EXP-0142,Auto rickshaw fare from Whitefield to railway station,147.7,2025-07-25,Travel
+EXP-0143,Rapido bike taxi to bus stand,64.92,2025-09-25,Travel
+EXP-0144,Chennai Metro ticket to Cyber Hub using credit card,31.01,2026-02-21,Travel
+EXP-0145,Lunch filter coffee at Third Wave Coffee,284.47,2025-03-24,Food
+EXP-0146,Ordered water bottle online from Flipkart,3186.87,2025-11-03,Shopping
+EXP-0147,Stationery and desk organizer order online via debit card,902.25,2025-12-23,Shopping
+EXP-0148,Ordered fried rice on Amazon Fresh,683.34,2025-06-08,Food
+EXP-0149,Ordered cooking gas refill online via CRED via debit card,936.8,2025-02-02,Utilities
+EXP-0150,Late night chole bhature delivery via EatSure,531.2,2026-01-27,Food
+EXP-0151,RedBus sleeper ticket to Hyderabad this morning,627.26,2025-10-14,Travel
+EXP-0152,Parking fee at tech park this morning,185.14,2026-01-20,Travel
+EXP-0153,Purchased power bank at Croma store,10592.32,2025-11-22,Shopping
+EXP-0154,MSEDCL home electricity bill payment using credit card,3212.68,2025-07-13,Utilities
+EXP-0155,TANGEDCO electricity bill for April using credit card,3613.05,2025-07-27,Utilities
+EXP-0156,Morning coffee and shawarma at Chai Point,286.16,2025-03-11,Food
+EXP-0157,Municipal property water tax online yesterday,1609.57,2026-03-07,Utilities
+EXP-0158,Breakfast roll at Pizza Hut,165.63,2025-07-15,Food
+EXP-0159,Ola Outstation trip to Jaipur,2800.98,2025-10-19,Travel
+EXP-0160,Bought sneakers at Westside Salt Lake,3726.54,2025-11-27,Shopping
+EXP-0161,Piped natural gas bill via PhonePe this morning,554.84,2025-07-23,Utilities
+EXP-0162,Nykaa order for moisturizer via debit card,1753.08,2025-05-26,Shopping
+EXP-0163,TANGEDCO electricity bill for April,763.25,2025-04-11,Utilities
+EXP-0164,Airtel Xstream Wi-Fi bill payment,1255.01,2025-08-03,Utilities
+EXP-0165,Ajio online order for running shoes via debit card,1537.9,2025-06-14,Shopping
+EXP-0166,Metro smart card recharge at Whitefield station,670.61,2025-12-19,Travel
+EXP-0167,Lunch margherita pizza at Belgian Waffle,616.1,2025-05-25,Food
+EXP-0168,Paid for water bottle at Reliance Digital via debit card,1217.95,2026-03-02,Shopping
+EXP-0169,Metro smart card recharge at T Nagar station for personal expense,246.49,2025-01-18,Travel
+EXP-0170,Auto rickshaw fare from Koramangala to bus stand,226.22,2025-05-29,Travel
+EXP-0171,Zomato order for veg thali and beverages,690.19,2025-07-26,Food
+EXP-0172,Monthly electricity bill payment via PhonePe using credit card,1563.95,2025-10-26,Utilities
+EXP-0173,Purchased bluetooth speaker from local electronics shop,2258.39,2025-10-13,Shopping
+EXP-0174,Ola cab booking from Guindy to Electronic City,448.63,2025-01-13,Travel
+EXP-0175,Ola cab booking from Kothrud to airport today,395.71,2025-05-31,Travel
+EXP-0176,Bought cushion covers from DMart,1258.2,2026-01-10,Shopping
+EXP-0177,Swiggy food delivery from Sangeetha Veg,242.15,2026-01-14,Food
+EXP-0178,Booked ride on Paytm Travel to Bengaluru,1117.39,2025-08-26,Travel
+EXP-0179,Cab ride back home from city center,444.62,2025-04-05,Travel
+EXP-0180,Ordered cooking gas refill online via Amazon Pay using credit card,1015.66,2025-01-22,Utilities
+EXP-0181,Late night pasta delivery via EatSure,376.7,2025-12-11,Food
+EXP-0182,Ordered pav bhaji online via Zomato,214.58,2025-11-15,Food
+EXP-0183,JioFiber internet subscription renewal yesterday,715.43,2025-06-01,Utilities
+EXP-0184,RedBus sleeper ticket to Chennai using credit card,1044.92,2025-12-07,Travel
+EXP-0185,Metro smart card recharge at Indiranagar station this morning,219.86,2025-03-16,Travel
+EXP-0186,Zomato order for paneer wrap and beverages,722.21,2025-07-06,Food
+EXP-0187,Ordered cooking gas refill online via Paytm via UPI,947.96,2025-10-31,Utilities
+EXP-0188,Dinner with friends at A2B,2334.15,2025-03-20,Food
+EXP-0189,Diesel fuel payment at HPCL this morning,1332.67,2025-11-30,Travel
+EXP-0190,MSEDCL home electricity bill payment today,3932.7,2025-02-10,Utilities
+EXP-0191,Diesel fuel payment at HPCL using credit card,3553.9,2025-04-15,Travel
+EXP-0192,Bought gift laptop backpack for team celebration this morning,1691.98,2025-12-02,Shopping
+EXP-0193,Ordered pav bhaji on Amazon Fresh via UPI,919.75,2025-01-01,Food
+EXP-0194,Booked ride on Paytm Travel to Bengaluru via debit card,1206.84,2025-08-28,Travel
+EXP-0195,TANGEDCO electricity bill for December for personal expense,1261.11,2025-10-27,Utilities
+EXP-0196,Paid cab bill online after trip to railway station,500.59,2026-03-20,Travel
+EXP-0197,Booked ride on Paytm Travel to Hyderabad,1430.34,2025-08-23,Travel
+EXP-0198,Quick sandwich takeaway from Belgian Waffle,146.92,2025-08-19,Food
+EXP-0199,Paid for SSD drive at Reliance Digital,3249.41,2025-05-23,Shopping
+EXP-0200,Airport cab pickup via Uber this morning,1249.24,2025-02-04,Travel
+EXP-0201,Zomato order for margherita pizza and beverages,363.76,2025-02-16,Food
+EXP-0202,BMTC bus pass monthly renewal today,970.57,2026-03-04,Travel
+EXP-0203,Morning coffee and momos at Dominos,237.23,2025-09-23,Food
+EXP-0204,Ordered sandwich online via Zomato,213.48,2025-12-26,Food
+EXP-0205,Street food chicken biryani at Gachibowli market,83.87,2026-02-17,Food
+EXP-0206,Fresh juice and margherita pizza at Kothrud cafe,132.27,2025-02-11,Food
+EXP-0207,Bought kurta set during weekend mall visit,1547.32,2025-04-30,Shopping
+EXP-0208,Ordered pav bhaji on Amazon Fresh,628.22,2026-02-12,Food
+EXP-0209,Zomato order for samosa and beverages for personal expense,461.56,2025-12-30,Food
+EXP-0210,Bought chinos during weekend mall visit,4418.29,2025-03-02,Shopping
+EXP-0211,ACT Fibernet broadband monthly bill via UPI,1247.34,2025-03-12,Utilities
+EXP-0212,Ola Outstation trip to Bengaluru,2691.06,2025-09-30,Travel
+EXP-0213,Prepaid electricity meter recharge via debit card,600.21,2025-03-16,Utilities
+EXP-0214,Uber ride to Kempegowda terminal,202.5,2025-11-23,Travel
+EXP-0215,Bought gift water bottle for team celebration,2514.21,2025-08-06,Shopping
+EXP-0216,IRCTC train ticket booking to Hyderabad,1916.93,2025-01-15,Travel
+EXP-0217,Bought gift SSD drive for birthday,1621.48,2025-10-19,Shopping
+EXP-0218,Piped natural gas bill via BHIM UPI this morning,1273.41,2026-01-13,Utilities
+EXP-0219,BSNL landline and broadband bill,706.55,2025-04-17,Utilities
+EXP-0220,Ordered laundry basket via Amazon Prime yesterday,1586.85,2025-11-23,Shopping
+EXP-0221,Morning coffee and samosa at Cream Stone,320.9,2025-04-09,Food
+EXP-0222,Swiggy food delivery from Haldirams,499.49,2025-06-28,Food
+EXP-0223,Flight ticket booking to Chennai,3799.1,2026-01-26,Travel
+EXP-0224,Chennai Metro ticket to Guindy,26.64,2026-01-17,Travel
+EXP-0225,IRCTC train ticket booking to Chennai,448.37,2025-07-06,Travel
+EXP-0226,Bought cotton t-shirt at Westside Andheri,3977.07,2025-08-24,Shopping
+EXP-0227,BESCOM power bill online payment this morning,1213.83,2025-05-27,Utilities
+EXP-0228,Ordered pizza online from Pizza Hut,415.62,2025-02-13,Food
+EXP-0229,MSEDCL home electricity bill payment via UPI,1933.68,2025-11-12,Utilities
+EXP-0230,TANGEDCO electricity bill for June for personal expense,1507.8,2025-02-01,Utilities
+EXP-0231,BSNL landline and broadband bill this morning,1175.64,2025-03-06,Utilities
+EXP-0232,Piped natural gas bill via BHIM UPI yesterday,1302.79,2026-03-27,Utilities
+EXP-0233,TANGEDCO electricity bill for April for personal expense,1625.07,2025-10-28,Utilities
+EXP-0234,Fresh juice and idli vada at Gachibowli cafe,392.11,2025-02-25,Food
+EXP-0235,IRCTC train ticket booking to Coimbatore,2372.23,2025-09-17,Travel
+EXP-0236,BESCOM power bill online payment for personal expense,3676.23,2025-12-24,Utilities
+EXP-0237,Auto rickshaw fare from Anna Nagar to railway station,108.43,2025-09-25,Travel
+EXP-0238,Two-wheeler service and chain lube at Salt Lake,1231.02,2026-01-10,Travel
+EXP-0239,Paid online for shawarma delivery from Swiggy,338.76,2026-03-04,Food
+EXP-0240,Two-wheeler service and chain lube at T Nagar using credit card,1313.2,2025-11-14,Travel
+EXP-0241,Diesel fuel payment at Shell for personal expense,2277.22,2026-03-01,Travel
+EXP-0242,South Indian thali lunch at Belgian Waffle this morning,393.86,2025-06-21,Food
+EXP-0243,Ordered bath towels via Amazon Prime,847.94,2025-11-22,Shopping
+EXP-0244,Ola Outstation trip to Coimbatore via debit card,3938.66,2025-05-08,Travel
+EXP-0245,Purchased trimmer on Amazon via debit card,4984.05,2026-02-08,Shopping
+EXP-0246,Ajio online order for hoodie,553.9,2025-12-03,Shopping
+EXP-0247,Late night idli vada delivery via EatSure,476.21,2025-03-20,Food
+EXP-0248,Vi mobile recharge for March today,277.28,2025-01-12,Utilities
+EXP-0249,Bookstore purchase of fiction novel yesterday,1068.29,2025-05-08,Shopping
+EXP-0250,Breakfast shawarma at Paradise Biryani today,127.15,2025-04-30,Food
+EXP-0251,Street food chicken biryani at HSR Layout market,218.92,2025-09-30,Food
+EXP-0252,BESCOM power bill online payment via debit card,2805.69,2025-07-29,Utilities
+EXP-0253,Fresh juice and pav bhaji at Jayanagar cafe this morning,358.32,2025-02-06,Food
+EXP-0254,Airtel Xstream Wi-Fi bill payment for personal expense,990.0,2025-05-03,Utilities
+EXP-0255,Monthly metro commute pass payment using credit card,1365.11,2026-02-28,Travel
+EXP-0256,Metro smart card recharge at Guindy station,748.88,2025-06-03,Travel
+EXP-0257,South Indian thali lunch at Subway this morning,205.1,2025-08-16,Food
+EXP-0258,Evening snacks and tea near Salt Lake,124.52,2026-03-27,Food
+EXP-0259,Booked ride on Paytm Travel to Mumbai,1802.19,2025-09-11,Travel
+EXP-0260,Bought cotton t-shirt during weekend mall visit via debit card,1209.33,2026-01-12,Shopping
+EXP-0261,Local suburban train pass renewal yesterday,319.36,2025-07-05,Travel
+EXP-0262,Uber ride to MG Road via debit card,644.13,2025-07-09,Travel
+EXP-0263,Bought winter jacket at Westside Anna Nagar,913.44,2025-01-30,Shopping
+EXP-0264,Ordered earbuds online from Flipkart,3435.72,2025-06-23,Shopping
+EXP-0265,Paid monthly utility bill via Amazon Pay this morning,1918.06,2025-01-11,Utilities
+EXP-0266,Auto rickshaw fare from HSR Layout to airport,173.11,2026-03-21,Travel
+EXP-0267,Ordered cooking gas refill online via CRED this morning,922.07,2025-11-03,Utilities
+EXP-0268,Monthly Prime shopping delivery order of storage containers,306.65,2025-06-20,Shopping
+EXP-0269,Paid bill for team lunch at Cream Stone using credit card,2800.47,2025-05-17,Food
+EXP-0270,MSEDCL home electricity bill payment via debit card,2935.06,2025-11-11,Utilities
+EXP-0271,Vi mobile recharge for March,735.67,2025-08-17,Utilities
+EXP-0272,Breakfast samosa at Third Wave Coffee,207.84,2025-06-21,Food
+EXP-0273,Paid online for water bottle order,4340.43,2026-02-23,Shopping
+EXP-0274,TANGEDCO electricity bill for January via debit card,3252.03,2025-01-20,Utilities
+EXP-0275,Metro smart card recharge at Koramangala station,869.52,2025-08-08,Travel
+EXP-0276,TANGEDCO electricity bill for February via UPI,3178.8,2025-07-11,Utilities
+EXP-0277,Petrol refill for bike at Nayara Energy,870.67,2025-11-12,Travel
+EXP-0278,TANGEDCO electricity bill for April yesterday,3311.38,2025-07-11,Utilities
+EXP-0279,Breakfast pav bhaji at Subway,203.06,2025-06-19,Food
+EXP-0280,Paid for wireless headphones at Reliance Digital,2055.56,2025-01-20,Shopping
+EXP-0281,South Indian thali lunch at Subway,269.4,2025-12-27,Food
+EXP-0282,Flipkart Big Billion sale purchase of USB-C cable today,7790.71,2025-12-22,Shopping
+EXP-0283,Chennai Metro ticket to Electronic City yesterday,25.07,2025-10-04,Travel
+EXP-0284,Lunch momos at Biryani Blues,475.0,2025-04-26,Food
+EXP-0285,Breakfast margherita pizza at Biryani Blues,113.14,2025-06-18,Food
+EXP-0286,Metro smart card recharge at Jayanagar station,693.05,2025-08-04,Travel
+EXP-0287,Purchased bluetooth speaker on Amazon using credit card,4860.99,2025-09-22,Shopping
+EXP-0288,Vi mobile recharge for December,394.5,2025-03-24,Utilities
+EXP-0289,Piped natural gas bill via Paytm,1050.84,2026-03-11,Utilities
+EXP-0290,JioFiber internet subscription renewal via debit card,1057.04,2025-08-06,Utilities
+EXP-0291,Bought gift mechanical keyboard for anniversary,2328.46,2026-01-26,Shopping
+EXP-0292,BESCOM power bill online payment using credit card,2351.41,2026-02-05,Utilities
+EXP-0293,Bought hoodie from Myntra,3484.9,2025-12-03,Shopping
+EXP-0294,Breakfast paneer wrap at Subway today,108.43,2025-05-30,Food
+EXP-0295,Metro smart card recharge at Indiranagar station yesterday,869.04,2025-12-22,Travel
+EXP-0296,Quick cold coffee takeaway from Subway,315.43,2025-07-16,Food
+EXP-0297,Two-wheeler service and chain lube at Andheri today,700.84,2025-09-05,Travel
+EXP-0298,Ordered pizza online from Subway,821.54,2026-02-21,Food
+EXP-0299,Diesel fuel payment at BPCL via debit card,1025.6,2025-04-09,Travel
+EXP-0300,Chennai Metro ticket to Electronic City via UPI,56.05,2026-02-14,Travel
+EXP-0301,Bought denim jeans at Westside Gachibowli,3104.91,2025-10-18,Shopping
+EXP-0302,HP Gas cylinder refill payment today,912.32,2025-02-28,Utilities
+EXP-0303,BSNL landline and broadband bill via UPI,922.8,2025-09-24,Utilities
+EXP-0304,Bought kurta set at Westside HSR Layout this morning,3039.49,2025-05-12,Shopping
+EXP-0305,Purchased badminton racket online today,1425.48,2025-10-27,Shopping
+EXP-0306,Piped natural gas bill via PhonePe for personal expense,841.49,2025-02-20,Utilities
+EXP-0307,Paid bill for team lunch at Belgian Waffle,1435.07,2025-11-19,Food
+EXP-0308,Ola Outstation trip to Kochi today,4214.0,2025-10-28,Travel
+EXP-0309,Ajio online order for cotton t-shirt this morning,749.31,2026-01-05,Shopping
+EXP-0310,Morning coffee and pasta at Udupi Upahar,149.16,2025-03-16,Food
+EXP-0311,Fresh juice and cold coffee at Adyar cafe,389.33,2025-01-20,Food
+EXP-0312,Vi mobile recharge for September this morning,712.83,2025-04-14,Utilities
+EXP-0313,Fresh juice and shawarma at Whitefield cafe,212.36,2025-07-24,Food
+EXP-0314,Monthly electricity bill payment via PhonePe this morning,1006.4,2025-09-04,Utilities
+EXP-0315,Evening snacks and tea near Velachery using credit card,152.92,2025-10-18,Food
+EXP-0316,Ordered samosa on Amazon Fresh,367.73,2025-04-22,Food
+EXP-0317,Late night samosa delivery via EatSure via UPI,410.19,2025-01-24,Food
+EXP-0318,Lunch idli vada at Pizza Hut,367.36,2026-01-16,Food
+EXP-0319,Ola Outstation trip to Kochi,3512.36,2025-11-11,Travel
+EXP-0320,Paid cab bill online after trip to city center,452.45,2026-01-21,Travel
+EXP-0321,Uber ride to Central Station,386.88,2025-02-17,Travel
+EXP-0322,Parking fee at airport,173.98,2026-02-16,Travel
+EXP-0323,Tata Play DTH recharge online via debit card,583.92,2025-03-14,Utilities
+EXP-0324,Vi mobile recharge for July this morning,357.8,2025-08-15,Utilities
+EXP-0325,Cab ride back home from Cyber Hub,548.54,2025-02-21,Travel
+EXP-0326,Cab ride back home from tech park,376.23,2025-03-25,Travel
+EXP-0327,ACT Fibernet broadband monthly bill this morning,925.82,2025-01-14,Utilities
+EXP-0328,Monthly metro commute pass payment via UPI,1380.15,2025-05-21,Travel
+EXP-0329,Ola cab booking from HSR Layout to Cyber Hub,153.44,2025-11-29,Travel
+EXP-0330,Flight ticket booking to Coimbatore this morning,8139.71,2025-07-15,Travel
+EXP-0331,Prepaid electricity meter recharge via UPI,1172.26,2025-07-10,Utilities
+EXP-0332,Bookstore purchase of hardcover notebook yesterday,1125.65,2026-01-26,Shopping
+EXP-0333,Purchased smartwatch on Amazon,6405.16,2025-08-30,Shopping
+EXP-0334,Monthly Prime shopping delivery order of bath towels via UPI,940.15,2026-02-17,Shopping
+EXP-0335,Dessert and ice cream order from Paradise Biryani,148.86,2025-06-26,Food
+EXP-0336,Weekend biryani order from Udupi Upahar,744.8,2025-08-29,Food
+EXP-0337,Monthly electricity bill payment via GPay via UPI,2612.79,2025-07-18,Utilities
+EXP-0338,Fresh juice and pasta at Velachery cafe using credit card,346.31,2026-01-17,Food
+EXP-0339,Municipal property water tax online today,1891.12,2026-01-15,Utilities
+EXP-0340,Dessert and ice cream order from KFC,179.52,2025-05-07,Food
+EXP-0341,BMTC bus pass monthly renewal,894.19,2025-07-02,Travel
+EXP-0342,Rapido bike taxi to MG Road via UPI,134.95,2026-02-04,Travel
+EXP-0343,Auto rickshaw fare from Bandra to city center this morning,152.51,2025-07-20,Travel
+EXP-0344,Airtel Xstream Wi-Fi bill payment this morning,803.5,2025-09-09,Utilities
+EXP-0345,Ajio online order for formal shirt,1246.45,2025-12-05,Shopping
+EXP-0346,IRCTC train ticket booking to Mumbai,2034.78,2026-03-25,Travel
+EXP-0347,Two-wheeler service and chain lube at Gachibowli yesterday,873.76,2025-06-23,Travel
+EXP-0348,Zomato order for fried rice and beverages,564.47,2025-12-13,Food
+EXP-0349,Piped natural gas bill via CRED yesterday,631.11,2025-07-09,Utilities
+EXP-0350,RedBus sleeper ticket to Hyderabad,1834.11,2025-12-11,Travel
+EXP-0351,Ola cab booking from Jayanagar to Tambaram,332.12,2026-03-05,Travel
+EXP-0352,Bought winter jacket at Westside Indiranagar via debit card,1438.42,2025-05-13,Shopping
+EXP-0353,Street food idli vada at Gachibowli market for personal expense,81.99,2025-09-16,Food
+EXP-0354,Booked ride on Paytm Travel to Kochi,1356.54,2025-01-19,Travel
+EXP-0355,Ola cab booking from Velachery to city center,713.07,2025-11-07,Travel
+EXP-0356,Purchased tripod stand on Amazon,3301.16,2025-11-19,Shopping
+EXP-0357,Flipkart Big Billion sale purchase of water bottle,1516.0,2025-01-09,Shopping
+EXP-0358,Dessert and ice cream order from McDonalds via UPI,429.12,2025-11-14,Food
+EXP-0359,Piped natural gas bill via Amazon Pay using credit card,481.02,2025-10-06,Utilities
+EXP-0360,Nykaa order for sunscreen today,1084.34,2025-03-15,Shopping
+EXP-0361,Ordered shampoo from Amazon,530.38,2025-12-12,Shopping
+EXP-0362,Vi mobile recharge for October for personal expense,654.79,2025-12-25,Utilities
+EXP-0363,TANGEDCO electricity bill for May this morning,1948.2,2025-10-16,Utilities
+EXP-0364,Ordered cushion covers via Amazon Prime,2250.33,2026-01-21,Shopping
+EXP-0365,Piped natural gas bill via PhonePe today,1387.75,2025-09-03,Utilities
+EXP-0366,Paid bill for team lunch at A2B using credit card,2772.25,2025-09-13,Food
+EXP-0367,MSEDCL home electricity bill payment yesterday,2205.79,2025-11-27,Utilities
+EXP-0368,Ordered desk lamp online from Flipkart yesterday,4632.65,2026-03-22,Shopping
+EXP-0369,Morning coffee and chicken biryani at KFC,109.24,2025-08-05,Food
+EXP-0370,Ordered moisturizer from Amazon this morning,878.73,2025-03-30,Shopping
+EXP-0371,Ajio online order for sneakers,2863.93,2025-03-24,Shopping
+EXP-0372,Evening snacks and tea near Adyar,106.74,2025-05-23,Food
+EXP-0373,BMTC bus pass monthly renewal for personal expense,1486.02,2025-04-07,Travel
+EXP-0374,Paid for trimmer at Reliance Digital using credit card,7843.91,2026-01-10,Shopping
+EXP-0375,Purchased phone case from local electronics shop this morning,980.15,2025-06-17,Shopping
+EXP-0376,Bought running shoes during weekend mall visit yesterday,4139.45,2026-01-07,Shopping
+EXP-0377,Monthly water bill payment for apartment via UPI,842.53,2025-07-05,Utilities
+EXP-0378,Booked ride on Paytm Travel to Coimbatore today,1013.06,2025-05-30,Travel
+EXP-0379,Bought gift power bank for team celebration,2287.0,2025-09-16,Shopping
+EXP-0380,Two-wheeler service and chain lube at Adyar,969.58,2025-06-03,Travel
+EXP-0381,Breakfast momos at A2B,258.65,2025-04-11,Food
+EXP-0382,Bought formal shirt at Westside HSR Layout,1583.65,2025-08-31,Shopping
+EXP-0383,Monthly electricity bill payment via CRED,3315.48,2025-02-20,Utilities
+EXP-0384,Bought gift bluetooth speaker for anniversary,2732.99,2025-11-18,Shopping
+EXP-0385,Street food pav bhaji at Jayanagar market,192.95,2025-10-04,Food
+EXP-0386,Vi mobile recharge for May,504.76,2025-07-08,Utilities
+EXP-0387,Street food samosa at Indiranagar market,137.32,2025-12-22,Food
+EXP-0388,Airtel DTH annual pack renewal for personal expense,3450.33,2025-08-20,Utilities
+EXP-0389,Cab ride back home from Electronic City,506.19,2026-03-05,Travel
+EXP-0390,Piped natural gas bill via GPay via debit card,601.24,2025-11-27,Utilities
+EXP-0391,Airtel Xstream Wi-Fi bill payment via debit card,1158.82,2026-01-27,Utilities
+EXP-0392,Ordered perfume from Amazon this morning,534.97,2025-02-18,Shopping
+EXP-0393,Paid bill for team lunch at Wow Momo,1613.77,2025-11-16,Food
+EXP-0394,Ordered cooking gas refill online via BHIM UPI today,990.63,2025-04-28,Utilities
+EXP-0395,Ordered samosa online via Zomato,638.95,2025-10-08,Food
+EXP-0396,Apartment maintenance and utility charge using credit card,4453.71,2025-01-04,Utilities
+EXP-0397,Decathlon purchase of dumbbells using credit card,2223.97,2026-03-09,Shopping
+EXP-0398,Prepaid electricity meter recharge yesterday,737.91,2026-02-15,Utilities
+EXP-0399,Ordered laundry basket via Amazon Prime,1060.99,2025-01-09,Shopping
+EXP-0400,JioFiber internet subscription renewal today,1195.62,2025-07-01,Utilities
+EXP-0401,RedBus sleeper ticket to Bengaluru via UPI,1746.64,2025-07-02,Travel
+EXP-0402,Chennai Metro ticket to Tambaram,46.54,2026-03-25,Travel
+EXP-0403,Chennai Metro ticket to city center,44.24,2025-07-03,Travel
+EXP-0404,Paid for USB-C cable at Reliance Digital,5551.37,2025-12-16,Shopping
+EXP-0405,Uber ride to railway station,189.8,2025-01-25,Travel
+EXP-0406,Auto rickshaw fare from Gachibowli to bus stand,207.16,2025-01-04,Travel
+EXP-0407,Ordered cooking gas refill online via Amazon Pay,934.27,2025-05-13,Utilities
+EXP-0408,Purchased electric kettle on Amazon,3803.16,2025-02-07,Shopping
+EXP-0409,Monthly water bill payment for apartment via debit card,801.22,2025-03-30,Utilities
+EXP-0410,Indane LPG cooking gas cylinder booking using credit card,984.89,2025-03-17,Utilities
+EXP-0411,HP Gas cylinder refill payment,1081.71,2025-09-01,Utilities
+EXP-0412,BSNL landline and broadband bill today,640.09,2025-12-09,Utilities
+EXP-0413,Purchased football online,1920.13,2026-01-01,Shopping
+EXP-0414,Flipkart Big Billion sale purchase of wireless headphones,8435.84,2025-08-21,Shopping
+EXP-0415,Monthly electricity bill payment via Amazon Pay,4176.46,2025-04-29,Utilities
+EXP-0416,Cab ride back home from airport,223.1,2025-03-06,Travel
+EXP-0417,Dinner with friends at Haldirams,1361.39,2025-07-01,Food
+EXP-0418,Ajio online order for kurta set yesterday,1936.96,2025-03-30,Shopping
+EXP-0419,Paid online for fried rice delivery from Swiggy,462.92,2025-03-06,Food
+EXP-0420,Ordered filter coffee on Amazon Fresh yesterday,411.6,2025-12-18,Food
+EXP-0421,Quick filter coffee takeaway from Chai Point,208.8,2025-02-07,Food
+EXP-0422,Purchased trimmer from local electronics shop,1463.93,2025-03-12,Shopping
+EXP-0423,MSEDCL home electricity bill payment this morning,3304.68,2025-10-15,Utilities
+EXP-0424,Diesel fuel payment at HPCL for personal expense,1051.39,2025-01-17,Travel
+EXP-0425,Ola cab booking from Koramangala to airport,728.69,2025-01-21,Travel
+EXP-0426,Paid online for USB-C cable order this morning,760.54,2025-04-11,Shopping
+EXP-0427,Paid online for water bottle order via UPI,946.43,2026-02-16,Shopping
+EXP-0428,Paid monthly utility bill via Amazon Pay for personal expense,545.81,2026-01-14,Utilities
+EXP-0429,Evening snacks and tea near Anna Nagar,75.96,2025-10-21,Food
+EXP-0430,HP Gas cylinder refill payment via debit card,910.76,2025-03-19,Utilities
+EXP-0431,Monthly metro commute pass payment today,1356.01,2025-03-25,Travel
+EXP-0432,Metro smart card recharge at Andheri station,223.2,2025-03-02,Travel
+EXP-0433,BESCOM power bill online payment today,3725.73,2025-12-01,Utilities
+EXP-0434,Morning coffee and pasta at Chai Point,172.3,2025-04-29,Food
+EXP-0435,JioFiber internet subscription renewal using credit card,758.51,2025-04-25,Utilities
+EXP-0436,Vi mobile recharge for September using credit card,278.04,2025-10-23,Utilities
+EXP-0437,Cab ride back home from Tambaram this morning,316.41,2026-01-29,Travel
+EXP-0438,Paid monthly utility bill via Amazon Pay yesterday,1710.22,2025-05-18,Utilities
+EXP-0439,Vi mobile recharge for August for personal expense,488.97,2025-08-19,Utilities
+EXP-0440,Lunch pav bhaji at KFC,523.4,2026-01-29,Food
+EXP-0441,Bought running shoes from Myntra this morning,1184.64,2026-01-21,Shopping
+EXP-0442,Swiggy food delivery from Subway,624.96,2025-07-27,Food
+EXP-0443,Tata Play DTH recharge online yesterday,372.1,2026-01-31,Utilities
+EXP-0444,Ordered wireless headphones online from Flipkart,1068.9,2025-05-11,Shopping
+EXP-0445,Chennai Metro ticket to Kempegowda terminal,36.25,2025-06-10,Travel
+EXP-0446,Indane LPG cooking gas cylinder booking via debit card,977.05,2025-05-06,Utilities
+EXP-0447,Monthly Prime shopping delivery order of storage containers yesterday,1302.54,2026-01-03,Shopping
+EXP-0448,Dessert and ice cream order from Wow Momo,460.1,2025-03-11,Food
+EXP-0449,Cab ride back home from office,488.34,2025-06-04,Travel
+EXP-0450,Chennai Metro ticket to bus stand,78.81,2026-02-11,Travel
+EXP-0451,Ordered cooking gas refill online via BHIM UPI this morning,950.23,2025-08-18,Utilities
+EXP-0452,Paid bill for team lunch at McDonalds,1203.19,2025-01-03,Food
+EXP-0453,TANGEDCO electricity bill for May via UPI,2313.37,2025-12-20,Utilities
+EXP-0454,HP Gas cylinder refill payment using credit card,988.33,2025-06-17,Utilities
+EXP-0455,Paid for laptop backpack at Reliance Digital via UPI,8091.71,2026-03-06,Shopping
+EXP-0456,Ajio online order for chinos using credit card,2274.32,2025-11-07,Shopping
+EXP-0457,Purchased smartwatch from local electronics shop,1304.79,2025-12-06,Shopping
+EXP-0458,Piped natural gas bill via Amazon Pay,1289.94,2025-03-19,Utilities
+EXP-0459,Airtel Xstream Wi-Fi bill payment using credit card,823.15,2025-08-07,Utilities
+EXP-0460,Monthly electricity bill payment via CRED this morning,3494.93,2025-09-08,Utilities
+EXP-0461,ACT Fibernet broadband monthly bill using credit card,1123.68,2025-06-24,Utilities
+EXP-0462,Bought running shoes at Westside Salt Lake,2713.78,2026-01-07,Shopping
+EXP-0463,Paid monthly utility bill via Amazon Pay,2929.52,2025-03-10,Utilities
+EXP-0464,Lunch idli vada at Sangeetha Veg,269.13,2025-01-01,Food
+EXP-0465,Cab ride back home from office yesterday,524.71,2025-11-01,Travel
+EXP-0466,Booked ride on Paytm Travel to Coimbatore using credit card,1669.73,2025-12-08,Travel
+EXP-0467,Ordered chicken biryani on Amazon Fresh,235.44,2025-01-02,Food
+EXP-0468,Vi mobile recharge for January for personal expense,495.8,2026-01-01,Utilities
+EXP-0469,Purchased smartwatch at Croma store for personal expense,11156.66,2025-02-27,Shopping
+EXP-0470,Uber ride to MG Road,290.16,2025-08-20,Travel
+EXP-0471,Bakery cake and pastries for family dinner using credit card,464.0,2025-07-12,Food
+EXP-0472,Ordered cooking gas refill online via GPay via UPI,1112.53,2025-02-12,Utilities
+EXP-0473,Purchased wireless headphones at Croma store,3003.51,2026-01-01,Shopping
+EXP-0474,Swiggy food delivery from A2B,278.19,2026-01-20,Food
+EXP-0475,Dinner with friends at Saravana Bhavan via UPI,2094.97,2026-02-05,Food
+EXP-0476,Ola Outstation trip to Jaipur this morning,4383.05,2025-04-29,Travel
+EXP-0477,Ordered pizza online from Belgian Waffle this morning,318.24,2025-03-09,Food
+EXP-0478,Ola cab booking from Adyar to tech park,511.19,2025-12-23,Travel
+EXP-0479,Lunch sandwich at KFC,174.8,2025-02-28,Food
+EXP-0480,Parking fee at Guindy,73.45,2025-08-11,Travel
+EXP-0481,Bought kurta set during weekend mall visit via UPI,2056.07,2025-06-03,Shopping
+EXP-0482,RedBus sleeper ticket to Chennai today,854.55,2025-08-07,Travel
+EXP-0483,Piped natural gas bill via CRED this morning,909.73,2025-10-26,Utilities
+EXP-0484,Weekend biryani order from Haldirams,333.88,2026-01-17,Food
+EXP-0485,Paid online for shawarma delivery from Swiggy using credit card,576.79,2025-07-29,Food
+EXP-0486,Piped natural gas bill via BHIM UPI via UPI,1186.62,2026-01-29,Utilities
+EXP-0487,BESCOM power bill online payment yesterday,1309.84,2025-12-05,Utilities
+EXP-0488,Bought gift phone case for team celebration,477.57,2026-03-25,Shopping
+EXP-0489,Bought storage containers from DMart,1238.27,2025-06-17,Shopping
+EXP-0490,Street food pasta at Salt Lake market,237.62,2025-09-20,Food
+EXP-0491,Purchased wireless mouse at Croma store,7906.85,2025-12-23,Shopping
+EXP-0492,Vi mobile recharge for June for personal expense,325.08,2025-11-19,Utilities
+EXP-0493,Uber ride to city center,172.56,2025-07-07,Travel
+EXP-0494,Ola cab booking from Indiranagar to airport,704.69,2025-08-21,Travel
+EXP-0495,Monthly electricity bill payment via PhonePe today,3313.44,2025-04-07,Utilities
+EXP-0496,Vi mobile recharge for November via debit card,468.18,2026-02-13,Utilities
+EXP-0497,Tata Play DTH recharge online via UPI,285.91,2025-03-31,Utilities
+EXP-0498,Quick shawarma takeaway from Dominos using credit card,131.3,2026-03-02,Food
+EXP-0499,Dinner with friends at Sangeetha Veg,477.18,2025-10-27,Food
+EXP-0500,Monthly electricity bill payment via BHIM UPI via UPI,4171.75,2025-04-06,Utilities
+EXP-0501,Cab ride back home from Central Station,199.96,2025-05-10,Travel
+EXP-0502,Rapido bike taxi to Kempegowda terminal,127.04,2025-07-12,Travel
+EXP-0503,Airtel postpaid mobile recharge for personal expense,932.99,2025-12-07,Utilities
+EXP-0504,Rapido bike taxi to MG Road,101.24,2025-10-11,Travel
+EXP-0505,BMTC bus pass monthly renewal yesterday,1395.19,2025-07-07,Travel
+EXP-0506,Bought gift USB-C cable for anniversary,1339.99,2025-06-25,Shopping
+EXP-0507,Street food roll at Indiranagar market,141.71,2025-12-10,Food
+EXP-0508,South Indian thali lunch at Sangeetha Veg,464.46,2025-06-10,Food
+EXP-0509,Bought laundry basket from DMart,2262.75,2025-12-25,Shopping
+EXP-0510,Ajio online order for running shoes via UPI,2197.07,2025-09-22,Shopping
+EXP-0511,Breakfast noodles at McDonalds,115.08,2026-01-16,Food
+EXP-0512,Street food masala dosa at Guindy market,237.25,2025-07-13,Food
+EXP-0513,Ordered cooking gas refill online via PhonePe using credit card,1025.79,2025-06-16,Utilities
+EXP-0514,Uber ride to bus stand,539.36,2025-06-12,Travel
+EXP-0515,Ordered bedsheet set via Amazon Prime,2192.15,2025-06-24,Shopping
+EXP-0516,Late night pasta delivery via EatSure via UPI,658.26,2026-03-19,Food
+EXP-0517,Monthly electricity bill payment via Paytm today,3629.07,2025-10-25,Utilities
+EXP-0518,MSEDCL home electricity bill payment for personal expense,3681.61,2025-09-05,Utilities
+EXP-0519,Monthly electricity bill payment via GPay for personal expense,3681.64,2026-03-24,Utilities
+EXP-0520,RedBus sleeper ticket to Mumbai,1229.9,2025-11-22,Travel
+EXP-0521,Flight ticket booking to Mumbai,3653.97,2025-06-07,Travel
+EXP-0522,Ordered cooking gas refill online via CRED using credit card,952.72,2025-07-17,Utilities
+EXP-0523,Lenskart order for polarized sunglasses this morning,1538.66,2026-01-19,Shopping
+EXP-0524,Paid online for margherita pizza delivery from Swiggy,638.65,2026-02-13,Food
+EXP-0525,Airport cab pickup via Uber,1307.57,2025-04-13,Travel
+EXP-0526,Weekend biryani order from Biryani Blues,511.06,2025-01-31,Food
+EXP-0527,Cab ride back home from railway station,580.85,2025-08-03,Travel
+EXP-0528,Fresh juice and idli vada at HSR Layout cafe,311.1,2025-10-24,Food
+EXP-0529,Weekend biryani order from Wow Momo,474.51,2025-11-16,Food
+EXP-0530,Weekend biryani order from A2B,432.37,2026-02-10,Food
+EXP-0531,Bought kitchen organizer from DMart,382.44,2025-08-04,Shopping
+EXP-0532,Rapido bike taxi to Kempegowda terminal via debit card,125.18,2025-10-23,Travel
+EXP-0533,Flipkart Big Billion sale purchase of trimmer,7685.95,2025-02-12,Shopping
+EXP-0534,Paid online for pasta delivery from Swiggy,676.0,2025-06-18,Food
+EXP-0535,TANGEDCO electricity bill for December,3555.96,2025-04-14,Utilities
+EXP-0536,Bought formal shirt at Westside Adyar using credit card,2111.47,2025-04-05,Shopping
+EXP-0537,Ordered bluetooth speaker online from Flipkart,950.23,2025-02-03,Shopping
+EXP-0538,Airport cab pickup via Uber for personal expense,455.43,2025-09-29,Travel
+EXP-0539,Monthly metro commute pass payment this morning,796.5,2025-03-01,Travel
+EXP-0540,Ordered cooking gas refill online via CRED yesterday,1075.45,2026-03-03,Utilities
+EXP-0541,Fresh juice and shawarma at Guindy cafe,359.85,2025-07-11,Food
+EXP-0542,Apartment maintenance and utility charge this morning,3396.85,2025-08-24,Utilities
+EXP-0543,Municipal property water tax online,1296.31,2025-04-17,Utilities
+EXP-0544,Vi mobile recharge for October,388.29,2025-11-06,Utilities
+EXP-0545,Ordered face wash from Amazon,1132.97,2025-12-06,Shopping
+EXP-0546,Chennai Metro ticket to railway station,79.2,2026-02-13,Travel
+EXP-0547,Ola Outstation trip to Hyderabad yesterday,4455.71,2025-04-09,Travel
+EXP-0548,Breakfast pav bhaji at Barbeque Nation for personal expense,198.51,2025-07-10,Food
+EXP-0549,South Indian thali lunch at Dominos,359.21,2025-08-23,Food
+EXP-0550,Airtel Xstream Wi-Fi bill payment via UPI,1087.36,2025-12-26,Utilities
+EXP-0551,Lenskart order for polarized sunglasses using credit card,4402.76,2026-01-02,Shopping
+EXP-0552,Chennai Metro ticket to Kempegowda terminal this morning,47.51,2025-09-29,Travel
+EXP-0553,Flipkart Big Billion sale purchase of wireless headphones using credit card,4414.81,2025-08-03,Shopping
+EXP-0554,Vi mobile recharge for August via debit card,301.85,2025-04-12,Utilities
+EXP-0555,Ordered storage containers via Amazon Prime,1506.97,2025-04-09,Shopping
+EXP-0556,Monthly office canteen meal card recharge for personal expense,2188.17,2025-04-01,Food
+EXP-0557,South Indian thali lunch at Barbeque Nation,341.77,2026-02-08,Food
+EXP-0558,Ordered cooking gas refill online via Amazon Pay today,970.02,2026-03-06,Utilities
+EXP-0559,Purchased water bottle on Amazon,426.69,2025-11-13,Shopping
+EXP-0560,Vi mobile recharge for July,717.56,2025-08-28,Utilities
+EXP-0561,Vi mobile recharge for December via UPI,653.1,2025-01-06,Utilities
+EXP-0562,Bookstore purchase of fiction novel,1035.75,2025-09-06,Shopping
+EXP-0563,Breakfast idli vada at Third Wave Coffee,187.35,2025-03-11,Food
+EXP-0564,Bought gift desk lamp for birthday,2146.19,2026-03-21,Shopping
+EXP-0565,Late night filter coffee delivery via EatSure,593.15,2025-09-15,Food
+EXP-0566,Ordered cooking gas refill online via PhonePe via debit card,902.89,2025-06-02,Utilities
+EXP-0567,Vi mobile recharge for April this morning,363.61,2026-02-06,Utilities
+EXP-0568,RedBus sleeper ticket to Chennai,663.56,2025-01-07,Travel
+EXP-0569,Purchased electric kettle from local electronics shop,1259.13,2025-08-07,Shopping
+EXP-0570,Nykaa order for sunscreen,937.63,2026-01-09,Shopping
+EXP-0571,Dessert and ice cream order from A2B using credit card,507.43,2026-03-05,Food
+EXP-0572,Purchased water bottle on Amazon this morning,1488.85,2025-04-01,Shopping
+EXP-0573,Dinner with friends at Third Wave Coffee,1008.57,2026-02-08,Food
+EXP-0574,RedBus sleeper ticket to Madurai,1700.22,2025-10-24,Travel
+EXP-0575,Fresh juice and samosa at Bandra cafe,162.92,2026-03-11,Food
+EXP-0576,Paid for power bank at Reliance Digital,7613.0,2026-03-16,Shopping
+EXP-0577,FASTag toll recharge for highway trip,405.39,2025-11-22,Travel
+EXP-0578,Bought sneakers during weekend mall visit,817.54,2026-02-02,Shopping
+EXP-0579,Bought gift trimmer for anniversary,1430.03,2025-02-01,Shopping
+EXP-0580,Bakery cake and pastries for team celebration,1051.82,2026-02-18,Food
+EXP-0581,Uber ride to tech park,648.4,2025-01-27,Travel
+EXP-0582,FASTag toll recharge for highway trip for personal expense,350.01,2025-01-08,Travel
+EXP-0583,Uber ride to Kempegowda terminal using credit card,542.48,2025-09-16,Travel
+EXP-0584,Purchased bluetooth speaker at Croma store for personal expense,7640.63,2025-02-24,Shopping
+EXP-0585,TANGEDCO electricity bill for October via debit card,2267.44,2025-07-10,Utilities
+EXP-0586,Metro smart card recharge at Adyar station,628.35,2025-05-25,Travel
+EXP-0587,Evening snacks and tea near Guindy,122.6,2025-01-11,Food
+EXP-0588,Zomato order for paneer wrap and beverages yesterday,537.61,2025-02-22,Food
+EXP-0589,RedBus sleeper ticket to Chennai via UPI,1435.96,2025-10-06,Travel
+EXP-0590,Street food samosa at HSR Layout market using credit card,213.46,2025-03-17,Food
+EXP-0591,Petrol refill for bike at Nayara Energy yesterday,362.83,2026-02-23,Travel
+EXP-0592,Ordered perfume from Amazon using credit card,1138.58,2025-09-02,Shopping
+EXP-0593,Jio prepaid mobile plan recharge yesterday,406.1,2025-12-17,Utilities
+EXP-0594,Apartment maintenance and utility charge,2245.22,2025-08-05,Utilities
+EXP-0595,Indane LPG cooking gas cylinder booking yesterday,951.8,2025-04-07,Utilities
+EXP-0596,Bought sneakers at Westside Adyar,1569.92,2025-07-17,Shopping
+EXP-0597,Paid online for electric kettle order,428.99,2025-04-16,Shopping
+EXP-0598,Vi mobile recharge for July via UPI,740.17,2025-08-22,Utilities
+EXP-0599,Ordered paneer wrap on Amazon Fresh,535.43,2025-01-22,Food
+EXP-0600,Nykaa order for face wash yesterday,628.34,2025-11-30,Shopping
+EXP-0601,Purchased power bank at Croma store this morning,7238.57,2026-01-05,Shopping
+EXP-0602,TANGEDCO electricity bill for September,1187.45,2025-01-06,Utilities
+EXP-0603,Flipkart Big Billion sale purchase of electric kettle,5032.6,2025-09-09,Shopping
+EXP-0604,Uber ride to office,460.59,2025-03-04,Travel
+EXP-0605,Bought backpack during weekend mall visit,3662.77,2026-02-19,Shopping
+EXP-0606,Nykaa order for hair serum,2124.54,2026-01-09,Shopping
+EXP-0607,Paid cab bill online after trip to Tambaram,532.4,2025-11-04,Travel
+EXP-0608,Bought gift water bottle for anniversary,1752.6,2026-01-13,Shopping
+EXP-0609,Swiggy food delivery from Sangeetha Veg via debit card,239.64,2026-02-20,Food
+EXP-0610,Bookstore purchase of exam prep guide today,1114.76,2025-10-24,Shopping
+EXP-0611,Auto rickshaw fare from Gachibowli to office via debit card,171.77,2025-04-04,Travel
+EXP-0612,IRCTC train ticket booking to Kochi using credit card,1511.63,2025-05-28,Travel
+EXP-0613,JioFiber internet subscription renewal for personal expense,831.03,2026-01-12,Utilities
+EXP-0614,Local suburban train pass renewal for personal expense,170.09,2025-03-18,Travel
+EXP-0615,Purchased water bottle from local electronics shop,1571.32,2026-03-19,Shopping
+EXP-0616,Ordered veg thali online via Zomato,298.28,2025-05-22,Food
+EXP-0617,Quick noodles takeaway from KFC,284.61,2025-08-01,Food
+EXP-0618,Bought backpack at Westside Bandra,2525.31,2025-03-13,Shopping
+EXP-0619,Bought kurta set at Westside T Nagar,2826.12,2025-03-13,Shopping
+EXP-0620,Monthly electricity bill payment via CRED yesterday,979.28,2025-11-25,Utilities
+EXP-0621,Dinner with friends at Wow Momo,494.29,2025-01-14,Food
+EXP-0622,RedBus sleeper ticket to Kochi this morning,598.82,2025-05-27,Travel
+EXP-0623,Lenskart order for blue-light glasses,4747.94,2025-10-24,Shopping
+EXP-0624,Vi mobile recharge for February,473.49,2025-04-02,Utilities
+EXP-0625,Indane LPG cooking gas cylinder booking,1144.71,2025-11-24,Utilities
+EXP-0626,Airport cab pickup via Uber today,1014.95,2025-08-27,Travel
+EXP-0627,South Indian thali lunch at Third Wave Coffee,279.9,2025-04-18,Food
+EXP-0628,Paid bill for team lunch at Paradise Biryani this morning,1236.2,2025-09-27,Food
+EXP-0629,Lunch paneer wrap at A2B,533.12,2025-09-12,Food
+EXP-0630,Municipal property water tax online using credit card,2118.82,2025-10-02,Utilities
+EXP-0631,Ola Outstation trip to Mumbai via debit card,4518.1,2026-03-07,Travel
+EXP-0632,Paid monthly utility bill via Amazon Pay using credit card,2511.45,2025-07-29,Utilities
+EXP-0633,South Indian thali lunch at Saravana Bhavan,192.28,2025-03-07,Food
+EXP-0634,Booked ride on Paytm Travel to Mumbai via UPI,1545.54,2025-10-18,Travel
+EXP-0635,Ola cab booking from Jayanagar to office,620.96,2026-03-14,Travel
+EXP-0636,Bookstore purchase of programming book,1365.29,2025-01-05,Shopping
+EXP-0637,Vi mobile recharge for August,261.78,2025-12-01,Utilities
+EXP-0638,Quick fried rice takeaway from Cream Stone this morning,299.37,2025-11-16,Food
+EXP-0639,Swiggy food delivery from Haldirams this morning,805.86,2025-10-23,Food
+EXP-0640,Ordered pizza online from Barbeque Nation,484.17,2026-02-04,Food
+EXP-0641,Purchased dumbbells online for personal expense,1235.63,2025-09-14,Shopping
+EXP-0642,Flipkart Big Billion sale purchase of laptop backpack,7461.05,2025-03-29,Shopping
+EXP-0643,TANGEDCO electricity bill for December yesterday,1080.51,2025-01-23,Utilities
+EXP-0644,Lunch idli vada at Saravana Bhavan,139.83,2025-03-25,Food
+EXP-0645,Zomato order for roll and beverages for personal expense,261.35,2025-12-02,Food
+EXP-0646,HP Gas cylinder refill payment yesterday,952.42,2025-01-26,Utilities
+EXP-0647,Ordered pizza online from KFC,663.12,2026-03-23,Food
+EXP-0648,Vi mobile recharge for November this morning,333.68,2025-05-03,Utilities
+EXP-0649,Auto rickshaw fare from Salt Lake to railway station,135.16,2025-08-19,Travel
+EXP-0650,Ordered mechanical keyboard online from Flipkart today,3925.78,2025-12-24,Shopping
+EXP-0651,Bought gift SSD drive for anniversary,2688.99,2026-01-07,Shopping
+EXP-0652,Paid bill for team lunch at Subway,3027.78,2025-04-10,Food
+EXP-0653,Chennai Metro ticket to Electronic City,57.98,2025-01-10,Travel
+EXP-0654,Paid for tripod stand at Reliance Digital,2680.38,2025-08-12,Shopping
+EXP-0655,Decathlon purchase of yoga mat,3205.65,2025-06-07,Shopping
+EXP-0656,Ola cab booking from Whitefield to airport via debit card,468.18,2025-10-17,Travel
+EXP-0657,Paid online for tripod stand order,3335.15,2025-07-27,Shopping
+EXP-0658,Paid bill for team lunch at Sangeetha Veg,2709.93,2026-01-05,Food
+EXP-0659,Diesel fuel payment at Nayara Energy via UPI,1675.65,2025-11-18,Travel
+EXP-0660,Vi mobile recharge for October yesterday,504.57,2025-05-05,Utilities
+EXP-0661,Morning coffee and chicken biryani at Belgian Waffle,298.45,2025-07-01,Food
+EXP-0662,ACT Fibernet broadband monthly bill for personal expense,699.41,2026-02-21,Utilities
+EXP-0663,Auto rickshaw fare from Guindy to Guindy,107.89,2025-11-15,Travel
+EXP-0664,Purchased trimmer from local electronics shop using credit card,838.72,2026-03-26,Shopping
+EXP-0665,ACT Fibernet broadband monthly bill via debit card,1438.1,2025-11-08,Utilities
+EXP-0666,Breakfast shawarma at Udupi Upahar,180.88,2026-03-21,Food
+EXP-0667,Bought hoodie from Myntra using credit card,3082.03,2025-06-29,Shopping
+EXP-0668,BMTC bus pass monthly renewal via debit card,1029.25,2025-03-29,Travel
+EXP-0669,Purchased SSD drive from local electronics shop for personal expense,970.71,2026-02-17,Shopping
+EXP-0670,Monthly electricity bill payment via Paytm for personal expense,2870.45,2025-08-14,Utilities
+EXP-0671,Street food roll at Jayanagar market today,55.22,2025-12-04,Food
+EXP-0672,Rapido bike taxi to IT Park,176.89,2025-08-01,Travel
+EXP-0673,Paid online for earbuds order,3662.1,2026-02-27,Shopping
+EXP-0674,Breakfast roll at Belgian Waffle,220.09,2025-06-15,Food
+EXP-0675,Ajio online order for denim jeans,2411.14,2025-08-19,Shopping
+EXP-0676,Ordered shawarma online via Zomato,354.72,2025-09-02,Food
+EXP-0677,Stationery and printer paper order online,296.39,2025-05-30,Shopping
+EXP-0678,Decathlon purchase of cycling gloves,1370.66,2025-04-23,Shopping
+EXP-0679,Purchased cycling gloves online,865.48,2025-01-18,Shopping
+EXP-0680,Breakfast noodles at Belgian Waffle,221.41,2025-08-30,Food
+EXP-0681,Ordered phone case online from Flipkart yesterday,4698.55,2025-06-14,Shopping
+EXP-0682,Ordered margherita pizza online via Zomato,783.6,2025-08-09,Food
+EXP-0683,Purchased SSD drive at Croma store,5409.65,2025-11-19,Shopping
+EXP-0684,TANGEDCO electricity bill for January,2269.95,2026-01-05,Utilities
+EXP-0685,Booked ride on Paytm Travel to Pune,1839.77,2026-01-26,Travel
+EXP-0686,Ola Outstation trip to Madurai,5300.29,2025-05-22,Travel
+EXP-0687,Airtel postpaid mobile recharge via debit card,1161.56,2025-02-11,Utilities
+EXP-0688,Bought sneakers from Myntra,3440.79,2025-11-18,Shopping
+EXP-0689,Piped natural gas bill via Amazon Pay via UPI,1398.54,2025-02-09,Utilities
+EXP-0690,Apartment maintenance and utility charge yesterday,2265.32,2025-10-27,Utilities
+EXP-0691,Airtel DTH annual pack renewal via UPI,3176.65,2025-07-30,Utilities
+EXP-0692,Diesel fuel payment at IndianOil,4496.87,2026-02-10,Travel
+EXP-0693,Ordered chicken biryani online via Zomato,893.61,2026-03-18,Food
+EXP-0694,TANGEDCO electricity bill for June,3242.26,2026-02-14,Utilities
+EXP-0695,Bought denim jeans from Myntra this morning,3268.65,2025-07-09,Shopping
+EXP-0696,RedBus sleeper ticket to Bengaluru,1374.83,2025-11-09,Travel
+EXP-0697,Airtel postpaid mobile recharge using credit card,989.81,2025-12-26,Utilities
+EXP-0698,Bookstore purchase of exam prep guide,308.6,2025-04-11,Shopping
+EXP-0699,Flight ticket booking to Mysuru using credit card,6229.74,2026-01-19,Travel
+EXP-0700,Jio prepaid mobile plan recharge using credit card,434.38,2025-09-07,Utilities
+EXP-0701,Paid monthly utility bill via Amazon Pay today,1595.83,2025-11-05,Utilities
+EXP-0702,Paid online for wireless headphones order,3995.22,2025-10-19,Shopping
+EXP-0703,Purchased yoga mat online,1683.09,2025-05-26,Shopping
+EXP-0704,Paid cab bill online after trip to MG Road,350.76,2025-01-01,Travel
+EXP-0705,IRCTC train ticket booking to Mumbai this morning,483.53,2025-07-10,Travel
+EXP-0706,Monthly electricity bill payment via BHIM UPI for personal expense,2105.44,2025-03-23,Utilities
+EXP-0707,Stationery and desk organizer order online,1071.37,2025-06-03,Shopping
+EXP-0708,Vi mobile recharge for September,365.58,2025-09-25,Utilities
+EXP-0709,Paid online for cold coffee delivery from Swiggy via debit card,621.75,2025-06-22,Food
+EXP-0710,Bought cushion covers from DMart this morning,2398.94,2026-01-18,Shopping
+EXP-0711,Bought denim jeans during weekend mall visit using credit card,1693.08,2025-09-22,Shopping
+EXP-0712,Lunch noodles at Dominos,207.24,2025-06-19,Food
+EXP-0713,Piped natural gas bill via CRED,1176.49,2025-10-24,Utilities
+EXP-0714,Ordered chole bhature online via Zomato,203.73,2025-09-26,Food
+EXP-0715,Petrol refill for bike at BPCL,471.73,2026-02-08,Travel
+EXP-0716,Airtel DTH annual pack renewal today,2765.82,2025-12-16,Utilities
+EXP-0717,Monthly office canteen meal card recharge today,1294.56,2025-10-29,Food
+EXP-0718,Paid online for filter coffee delivery from Swiggy for personal expense,775.27,2025-08-14,Food
+EXP-0719,Quick idli vada takeaway from Barbeque Nation,394.65,2025-03-01,Food
+EXP-0720,Nykaa order for perfume this morning,1188.57,2026-01-21,Shopping
+EXP-0721,Ola cab booking from Salt Lake to city center,511.63,2025-01-21,Travel
+EXP-0722,Bakery cake and pastries for birthday this morning,635.85,2026-03-24,Food
+EXP-0723,Two-wheeler service and chain lube at Andheri,842.79,2025-04-30,Travel
+EXP-0724,Vi mobile recharge for January,794.49,2025-09-07,Utilities
+EXP-0725,Metro smart card recharge at Gachibowli station using credit card,787.91,2026-01-14,Travel
+EXP-0726,Uber ride to office using credit card,469.47,2026-01-09,Travel
+EXP-0727,Lunch chole bhature at Chai Point,598.41,2025-09-28,Food
+EXP-0728,Lunch shawarma at Cream Stone via debit card,336.52,2025-12-13,Food
+EXP-0729,Bought chinos at Westside HSR Layout,3560.5,2025-10-31,Shopping
+EXP-0730,Flipkart Big Billion sale purchase of power bank for personal expense,4064.35,2026-01-21,Shopping
+EXP-0731,Breakfast samosa at A2B using credit card,173.65,2026-02-21,Food
+EXP-0732,Monthly water bill payment for apartment today,489.9,2025-09-12,Utilities
+EXP-0733,TANGEDCO electricity bill for November for personal expense,1728.95,2025-09-10,Utilities
+EXP-0734,Monthly metro commute pass payment,1239.27,2025-01-24,Travel
+EXP-0735,RedBus sleeper ticket to Mysuru via debit card,1552.63,2025-05-22,Travel
+EXP-0736,IRCTC train ticket booking to Bengaluru,643.35,2025-05-03,Travel
+EXP-0737,Vi mobile recharge for August this morning,415.36,2025-03-02,Utilities
+EXP-0738,Metro smart card recharge at Kothrud station,547.02,2025-06-24,Travel
+EXP-0739,Vi mobile recharge for January using credit card,787.01,2025-09-16,Utilities
+EXP-0740,Indane LPG cooking gas cylinder booking today,1126.56,2026-01-25,Utilities
+EXP-0741,IRCTC train ticket booking to Mumbai via UPI,2412.88,2025-05-13,Travel
+EXP-0742,Swiggy food delivery from Chai Point,495.53,2025-11-05,Food
+EXP-0743,Ordered pizza online from Chai Point using credit card,1046.42,2026-02-09,Food
+EXP-0744,TANGEDCO electricity bill for November via UPI,2823.05,2025-06-18,Utilities
+EXP-0745,Ordered electric kettle online from Flipkart,5073.47,2025-11-11,Shopping
+EXP-0746,Monthly meal subscription renewal online this morning,1786.49,2025-06-24,Food
+EXP-0747,IRCTC train ticket booking to Pune,934.45,2025-06-03,Travel
+EXP-0748,Airtel Xstream Wi-Fi bill payment yesterday,1234.71,2025-09-01,Utilities
+EXP-0749,Bought formal shirt from Myntra today,2362.09,2025-06-03,Shopping
+EXP-0750,Bought running shoes during weekend mall visit,1048.52,2026-01-10,Shopping
+EXP-0751,Paid online for phone case order,969.9,2026-03-08,Shopping
+EXP-0752,Monthly Prime shopping delivery order of non-stick pan,847.23,2025-03-23,Shopping
+EXP-0753,Piped natural gas bill via Amazon Pay today,724.76,2025-01-26,Utilities
+EXP-0754,Chennai Metro ticket to MG Road,48.45,2025-04-13,Travel
+EXP-0755,Ordered moisturizer from Amazon,632.79,2025-12-19,Shopping
+EXP-0756,South Indian thali lunch at Wow Momo,338.51,2025-05-28,Food
+EXP-0757,Parking fee at city center,175.91,2026-03-01,Travel
+EXP-0758,Piped natural gas bill via GPay via UPI,1495.21,2025-05-22,Utilities
+EXP-0759,Ordered masala dosa on Amazon Fresh,784.99,2025-01-14,Food
+EXP-0760,Ordered shawarma online via Zomato using credit card,231.25,2025-09-01,Food
+EXP-0761,Ordered cooking gas refill online via Paytm,1047.99,2025-07-17,Utilities
+EXP-0762,Ordered laptop backpack online from Flipkart,1239.38,2025-01-01,Shopping
+EXP-0763,Paid monthly utility bill via Amazon Pay via debit card,2498.73,2025-03-02,Utilities
+EXP-0764,Prepaid electricity meter recharge using credit card,2138.4,2025-07-03,Utilities
+EXP-0765,TANGEDCO electricity bill for January this morning,3333.94,2026-02-25,Utilities
+EXP-0766,Piped natural gas bill via CRED via UPI,1387.75,2025-08-02,Utilities
+EXP-0767,Jio prepaid mobile plan recharge,506.2,2025-01-12,Utilities
+EXP-0768,Paid for smartwatch at Reliance Digital via UPI,6860.62,2025-03-16,Shopping
+EXP-0769,Airtel Xstream Wi-Fi bill payment today,1363.92,2025-11-24,Utilities
+EXP-0770,Bought non-stick pan from DMart,1730.36,2025-12-18,Shopping
+EXP-0771,Ordered cooking gas refill online via GPay for personal expense,1082.3,2025-09-01,Utilities
+EXP-0772,Petrol refill for bike at Nayara Energy this morning,471.21,2025-03-18,Travel
+EXP-0773,Ordered idli vada on Amazon Fresh,792.88,2025-12-14,Food
+EXP-0774,Evening snacks and tea near Guindy via debit card,214.15,2025-10-22,Food
+EXP-0775,Dinner with friends at Biryani Blues,660.09,2026-02-07,Food
+EXP-0776,Lunch shawarma at McDonalds via debit card,287.44,2026-01-20,Food
+EXP-0777,Piped natural gas bill via PhonePe yesterday,572.69,2025-06-19,Utilities
+EXP-0778,South Indian thali lunch at Paradise Biryani using credit card,193.25,2025-06-10,Food
+EXP-0779,Bought gift power bank for family dinner this morning,2300.95,2026-03-15,Shopping
+EXP-0780,Dessert and ice cream order from Saravana Bhavan,199.0,2026-03-16,Food
+EXP-0781,Metro smart card recharge at Gachibowli station,422.46,2025-04-25,Travel
+EXP-0782,Flight ticket booking to Pune,4475.15,2025-11-02,Travel
+EXP-0783,Dessert and ice cream order from Belgian Waffle,255.31,2025-11-17,Food
+EXP-0784,Piped natural gas bill via GPay today,1184.25,2025-12-24,Utilities
+EXP-0785,Petrol refill for bike at BPCL today,1046.53,2026-01-15,Travel
+EXP-0786,Ola cab booking from Indiranagar to IT Park,631.87,2025-12-26,Travel
+EXP-0787,Uber ride to Cyber Hub via UPI,265.6,2025-04-08,Travel
+EXP-0788,Chennai Metro ticket to Cyber Hub,56.97,2025-04-24,Travel
+EXP-0789,Breakfast paneer wrap at Haldirams this morning,219.07,2025-03-09,Food
+EXP-0790,Ordered paneer wrap on Amazon Fresh today,632.62,2025-01-26,Food
+EXP-0791,Ordered cooking gas refill online via GPay,1135.9,2026-03-20,Utilities
+EXP-0792,Chennai Metro ticket to bus stand this morning,26.3,2025-12-09,Travel
+EXP-0793,Late night shawarma delivery via EatSure,193.61,2025-07-03,Food
+EXP-0794,Street food samosa at Koramangala market,255.71,2025-09-25,Food
+EXP-0795,Monthly meal subscription renewal online via debit card,2700.23,2025-08-03,Food
+EXP-0796,Paid for phone case at Reliance Digital,934.47,2025-09-25,Shopping
+EXP-0797,Breakfast margherita pizza at Saravana Bhavan,341.68,2025-04-24,Food
+EXP-0798,Piped natural gas bill via PhonePe,925.59,2025-01-02,Utilities
+EXP-0799,Paid online for chicken biryani delivery from Swiggy,503.5,2026-01-10,Food
+EXP-0800,Flight ticket booking to Mysuru,5837.23,2025-04-02,Travel
+EXP-0801,Dessert and ice cream order from Sangeetha Veg,166.17,2026-03-10,Food
+EXP-0802,Chennai Metro ticket to tech park,55.91,2025-04-18,Travel
+EXP-0803,FASTag toll recharge for highway trip using credit card,653.32,2025-03-25,Travel
+EXP-0804,Uber ride to Cyber Hub,279.8,2025-03-31,Travel
+EXP-0805,Uber ride to IT Park,376.38,2025-01-12,Travel
+EXP-0806,Zomato order for roll and beverages,327.05,2026-02-27,Food
+EXP-0807,RedBus sleeper ticket to Mysuru,909.73,2025-07-23,Travel
+EXP-0808,Booked ride on Paytm Travel to Mumbai today,654.87,2025-03-22,Travel
+EXP-0809,Swiggy food delivery from Udupi Upahar,490.73,2025-11-03,Food
+EXP-0810,Zomato order for samosa and beverages,641.2,2025-09-02,Food
+EXP-0811,Ola cab booking from Indiranagar to Electronic City,281.35,2025-06-23,Travel
+EXP-0812,Monthly Prime shopping delivery order of bath towels,401.9,2025-04-06,Shopping
+EXP-0813,Lunch filter coffee at Sangeetha Veg,173.89,2025-11-18,Food
+EXP-0814,Jio prepaid mobile plan recharge for personal expense,781.01,2025-03-12,Utilities
+EXP-0815,Weekend biryani order from Barbeque Nation,387.79,2025-06-07,Food
+EXP-0816,Piped natural gas bill via GPay using credit card,663.03,2025-10-28,Utilities
+EXP-0817,Chennai Metro ticket to IT Park,39.02,2026-01-05,Travel
+EXP-0818,Bought backpack at Westside HSR Layout yesterday,1447.2,2025-10-25,Shopping
+EXP-0819,TANGEDCO electricity bill for April this morning,3898.15,2025-08-01,Utilities
+EXP-0820,Parking fee at Electronic City,131.59,2026-01-13,Travel
+EXP-0821,Weekend biryani order from Paradise Biryani,320.8,2026-01-03,Food
+EXP-0822,Dinner with friends at Paradise Biryani,722.52,2025-05-28,Food
+EXP-0823,TANGEDCO electricity bill for October this morning,2723.05,2026-01-17,Utilities
+EXP-0824,Paid cab bill online after trip to MG Road today,427.62,2025-07-28,Travel
+EXP-0825,Quick noodles takeaway from Paradise Biryani,190.54,2026-01-03,Food
+EXP-0826,Flight ticket booking to Jaipur,5835.92,2026-01-23,Travel
+EXP-0827,Street food pav bhaji at Guindy market,75.58,2025-12-02,Food
+EXP-0828,Ordered cooking gas refill online via Paytm for personal expense,1113.72,2025-01-18,Utilities
+EXP-0829,Paid online for trimmer order,1546.15,2026-02-18,Shopping
+EXP-0830,Two-wheeler service and chain lube at Bandra via debit card,531.64,2025-08-30,Travel
+EXP-0831,Bought kurta set from Myntra,2342.42,2025-04-04,Shopping
+EXP-0832,Piped natural gas bill via Amazon Pay this morning,558.11,2026-02-03,Utilities
+EXP-0833,Ajio online order for denim jeans today,1425.85,2025-08-03,Shopping
+EXP-0834,IRCTC train ticket booking to Jaipur,1883.73,2025-01-21,Travel
+EXP-0835,Ordered non-stick pan via Amazon Prime,2304.0,2025-01-24,Shopping
+EXP-0836,Jio prepaid mobile plan recharge via debit card,357.46,2025-09-17,Utilities
+EXP-0837,Late night margherita pizza delivery via EatSure via debit card,311.44,2025-11-10,Food
+EXP-0838,Fresh juice and fried rice at Adyar cafe,334.2,2025-08-09,Food
+EXP-0839,Parking fee at tech park,134.13,2025-09-16,Travel
+EXP-0840,South Indian thali lunch at Haldirams,296.33,2025-10-26,Food
+EXP-0841,Breakfast filter coffee at Barbeque Nation,180.15,2026-03-08,Food
+EXP-0842,Booked ride on Paytm Travel to Coimbatore,1170.23,2025-06-14,Travel
+EXP-0843,Zomato order for roll and beverages yesterday,229.13,2025-10-09,Food
+EXP-0844,Purchased dumbbells online,2674.95,2026-01-18,Shopping
+EXP-0845,RedBus sleeper ticket to Pune,1598.64,2025-03-10,Travel
+EXP-0846,Parking fee at bus stand via UPI,168.7,2025-01-24,Travel
+EXP-0847,TANGEDCO electricity bill for July,3838.63,2025-03-22,Utilities
+EXP-0848,Purchased wireless headphones on Amazon,3056.55,2026-03-02,Shopping
+EXP-0849,Paid cab bill online after trip to Cyber Hub this morning,665.12,2025-09-26,Travel
+EXP-0850,Piped natural gas bill via Paytm for personal expense,483.57,2025-12-03,Utilities
+EXP-0851,Paid cab bill online after trip to Kempegowda terminal via debit card,520.65,2025-01-09,Travel
+EXP-0852,Bought gift bluetooth speaker for team celebration today,1718.96,2025-12-08,Shopping
+EXP-0853,Morning coffee and margherita pizza at A2B via UPI,308.75,2025-04-12,Food
+EXP-0854,Diesel fuel payment at Shell,3969.96,2026-01-21,Travel
+EXP-0855,Bought chinos from Myntra,1829.97,2025-09-01,Shopping
+EXP-0856,Ordered fried rice online via Zomato,588.69,2025-04-03,Food
+EXP-0857,Monthly Prime shopping delivery order of non-stick pan today,602.35,2025-08-20,Shopping
+EXP-0858,Ajio online order for kurta set using credit card,1968.05,2025-01-01,Shopping
+EXP-0859,Bought cotton t-shirt from Myntra via UPI,1320.03,2025-03-30,Shopping
+EXP-0860,Bought gift mechanical keyboard for birthday,823.13,2025-06-17,Shopping
+EXP-0861,Paid bill for team lunch at Haldirams,1022.78,2025-03-22,Food
+EXP-0862,Fresh juice and roll at Velachery cafe,205.67,2025-06-07,Food
+EXP-0863,Decathlon purchase of football,3108.84,2025-03-01,Shopping
+EXP-0864,Indane LPG cooking gas cylinder booking for personal expense,932.55,2025-01-08,Utilities
+EXP-0865,Monthly electricity bill payment via PhonePe,1078.33,2025-12-03,Utilities
+EXP-0866,Auto rickshaw fare from Gachibowli to Electronic City via UPI,141.08,2025-03-05,Travel
+EXP-0867,Purchased earbuds on Amazon via UPI,5632.74,2025-04-13,Shopping
+EXP-0868,Nykaa order for perfume,1932.66,2026-01-12,Shopping
+EXP-0869,BESCOM power bill online payment via UPI,1228.11,2025-12-28,Utilities
+EXP-0870,Flight ticket booking to Mumbai this morning,8122.15,2025-05-03,Travel
+EXP-0871,Nykaa order for face wash,1025.95,2026-02-24,Shopping
+EXP-0872,Vi mobile recharge for April for personal expense,362.75,2025-07-17,Utilities
+EXP-0873,Bakery cake and pastries for weekend gathering,1195.0,2025-01-28,Food
+EXP-0874,Paid monthly utility bill via Amazon Pay via UPI,1974.65,2025-01-23,Utilities
+EXP-0875,Cab ride back home from Kempegowda terminal,462.19,2025-10-28,Travel
+EXP-0876,Rapido bike taxi to railway station,87.35,2025-10-07,Travel
+EXP-0877,TANGEDCO electricity bill for October using credit card,1721.3,2025-06-06,Utilities
+EXP-0878,IRCTC train ticket booking to Mysuru for personal expense,610.73,2026-01-16,Travel
+EXP-0879,Nykaa order for hair serum this morning,993.86,2025-01-05,Shopping
+EXP-0880,Zomato order for pasta and beverages for personal expense,379.18,2025-07-14,Food
+EXP-0881,Swiggy food delivery from Paradise Biryani,559.71,2025-03-31,Food
+EXP-0882,Metro smart card recharge at Bandra station,789.36,2025-12-29,Travel
+EXP-0883,Paid for electric kettle at Reliance Digital this morning,7585.15,2025-07-11,Shopping
+EXP-0884,Ordered samosa on Amazon Fresh via debit card,895.11,2025-06-15,Food
+EXP-0885,Purchased phone case on Amazon,5673.27,2025-05-02,Shopping
+EXP-0886,Paid online for power bank order,3389.52,2026-01-09,Shopping
+EXP-0887,Bakery cake and pastries for family dinner via debit card,1194.33,2025-11-10,Food
+EXP-0888,Diesel fuel payment at Nayara Energy,1321.02,2025-06-01,Travel
+EXP-0889,Ola Outstation trip to Coimbatore this morning,4984.66,2025-06-23,Travel
+EXP-0890,Jio prepaid mobile plan recharge this morning,640.37,2026-03-13,Utilities
+EXP-0891,Parking fee at airport this morning,90.31,2025-12-12,Travel
+EXP-0892,Piped natural gas bill via GPay for personal expense,1046.73,2026-03-12,Utilities
+EXP-0893,Monthly electricity bill payment via CRED via debit card,1950.49,2025-10-29,Utilities
+EXP-0894,Rapido bike taxi to tech park,90.51,2026-03-15,Travel
+EXP-0895,Cab ride back home from bus stand,473.5,2025-11-28,Travel
+EXP-0896,Airtel postpaid mobile recharge this morning,713.34,2025-10-22,Utilities
+EXP-0897,Airport cab pickup via Uber yesterday,703.38,2025-08-26,Travel
+EXP-0898,Monthly water bill payment for apartment,681.73,2025-10-16,Utilities
+EXP-0899,Ordered filter coffee online via Zomato,817.28,2025-12-20,Food
+EXP-0900,BESCOM power bill online payment,1209.56,2025-10-06,Utilities
+EXP-0901,Paid online for idli vada delivery from Swiggy yesterday,603.55,2025-11-19,Food
+EXP-0902,Bought sneakers from Myntra via debit card,3070.89,2025-05-15,Shopping
+EXP-0903,Fresh juice and samosa at Salt Lake cafe for personal expense,236.55,2025-01-21,Food
+EXP-0904,Fresh juice and fried rice at T Nagar cafe,159.27,2025-06-24,Food
+EXP-0905,Ordered pizza online from Wow Momo,565.26,2026-01-30,Food
+EXP-0906,TANGEDCO electricity bill for August,2692.67,2025-12-14,Utilities
+EXP-0907,Dessert and ice cream order from Third Wave Coffee,207.87,2026-03-09,Food
+EXP-0908,Indane LPG cooking gas cylinder booking this morning,868.62,2026-03-04,Utilities
+EXP-0909,Late night sandwich delivery via EatSure,543.96,2025-04-26,Food
+EXP-0910,Monthly electricity bill payment via Amazon Pay today,2992.98,2025-08-02,Utilities
+EXP-0911,Ordered desk lamp online from Flipkart,3295.48,2026-01-16,Shopping
+EXP-0912,Late night roll delivery via EatSure,238.57,2025-02-27,Food
+EXP-0913,Booked ride on Paytm Travel to Mysuru,1150.4,2026-03-27,Travel
+EXP-0914,TANGEDCO electricity bill for March this morning,3453.82,2025-08-05,Utilities
+EXP-0915,Bought door mat from DMart,2339.08,2025-08-14,Shopping
+EXP-0916,Bakery cake and pastries for team celebration yesterday,1287.78,2025-10-24,Food
+EXP-0917,Two-wheeler service and chain lube at Koramangala for personal expense,475.18,2025-04-03,Travel
+EXP-0918,Bought denim jeans at Westside Adyar,1455.17,2025-03-20,Shopping
+EXP-0919,Uber ride to airport,612.87,2026-01-04,Travel
+EXP-0920,Ordered perfume from Amazon via UPI,1311.56,2025-09-27,Shopping
+EXP-0921,Bought formal shirt at Westside Gachibowli,4142.79,2025-03-09,Shopping
+EXP-0922,Ordered SSD drive online from Flipkart,1805.88,2025-10-19,Shopping
+EXP-0923,BSNL landline and broadband bill yesterday,523.04,2025-01-24,Utilities
+EXP-0924,Dinner with friends at KFC,1771.43,2025-05-27,Food
+EXP-0925,Morning coffee and samosa at Biryani Blues,273.82,2026-03-18,Food
+EXP-0926,Swiggy food delivery from Pizza Hut,403.03,2026-03-13,Food
+EXP-0927,Ordered mechanical keyboard online from Flipkart,3386.76,2025-04-24,Shopping
+EXP-0928,IRCTC train ticket booking to Kochi,2267.43,2025-04-03,Travel
+EXP-0929,Ordered pizza online from Third Wave Coffee,384.72,2025-06-04,Food
+EXP-0930,Cab ride back home from city center for personal expense,211.25,2025-03-03,Travel
+EXP-0931,Vi mobile recharge for March this morning,729.07,2025-03-06,Utilities
+EXP-0932,South Indian thali lunch at Subway using credit card,294.26,2025-03-30,Food
+EXP-0933,Weekend biryani order from Cream Stone,437.42,2026-01-26,Food
+EXP-0934,Flipkart Big Billion sale purchase of water bottle using credit card,3035.19,2026-03-02,Shopping
+EXP-0935,Paid online for pav bhaji delivery from Swiggy,723.32,2025-09-10,Food
+EXP-0936,Lunch sandwich at Wow Momo for personal expense,534.85,2025-11-12,Food
+EXP-0937,Airport cab pickup via Uber using credit card,915.99,2025-06-24,Travel
+EXP-0938,Monthly Prime shopping delivery order of bedsheet set,327.19,2025-05-20,Shopping
+EXP-0939,Ola cab booking from HSR Layout to Guindy,565.63,2026-02-02,Travel
+EXP-0940,Metro smart card recharge at T Nagar station,709.66,2025-11-04,Travel
+EXP-0941,Auto rickshaw fare from Anna Nagar to Cyber Hub,78.63,2025-02-10,Travel
+EXP-0942,ACT Fibernet broadband monthly bill yesterday,1187.18,2025-07-18,Utilities
+EXP-0943,Vi mobile recharge for May yesterday,493.17,2025-04-14,Utilities
+EXP-0944,Evening snacks and tea near Indiranagar,75.98,2025-10-17,Food
+EXP-0945,Ordered cooking gas refill online via Amazon Pay this morning,1009.42,2025-08-25,Utilities
+EXP-0946,Paid bill for team lunch at Chai Point today,2176.16,2026-02-17,Food
+EXP-0947,Paid cab bill online after trip to railway station today,331.53,2026-01-25,Travel
+EXP-0948,Piped natural gas bill via Paytm this morning,596.29,2025-11-05,Utilities
+EXP-0949,Bought gift USB-C cable for birthday,2882.74,2025-06-16,Shopping
+EXP-0950,Airtel DTH annual pack renewal,2348.04,2026-01-29,Utilities
+EXP-0951,Ordered SSD drive online from Flipkart using credit card,406.66,2025-06-13,Shopping
+EXP-0952,Bought gift desk lamp for family dinner for personal expense,993.46,2025-05-06,Shopping
+EXP-0953,Paid online for smartwatch order,4006.3,2025-07-06,Shopping
+EXP-0954,Dinner with friends at A2B this morning,1532.64,2025-02-06,Food
+EXP-0955,Airtel DTH annual pack renewal this morning,2520.81,2026-01-19,Utilities
+EXP-0956,Piped natural gas bill via Paytm yesterday,601.6,2026-01-14,Utilities
+EXP-0957,Chennai Metro ticket to Central Station,78.91,2025-04-16,Travel
+EXP-0958,Quick paneer wrap takeaway from Udupi Upahar,219.46,2026-01-12,Food
+EXP-0959,Rapido bike taxi to city center,184.04,2025-09-08,Travel
+EXP-0960,Auto rickshaw fare from Gachibowli to railway station yesterday,183.58,2025-03-22,Travel
+EXP-0961,Ajio online order for backpack,2004.93,2025-08-05,Shopping
+EXP-0962,Auto rickshaw fare from Adyar to tech park,67.18,2025-11-26,Travel
+EXP-0963,Rapido bike taxi to Cyber Hub,94.08,2026-02-02,Travel
+EXP-0964,Paid bill for team lunch at KFC,2667.89,2026-01-08,Food
+EXP-0965,TANGEDCO electricity bill for February,1102.12,2026-03-02,Utilities
+EXP-0966,Breakfast sandwich at Belgian Waffle,327.32,2025-06-19,Food
+EXP-0967,Dinner with friends at McDonalds,1740.74,2026-02-20,Food
+EXP-0968,Vi mobile recharge for August today,354.77,2025-05-10,Utilities
+EXP-0969,IRCTC train ticket booking to Mysuru,564.89,2025-11-23,Travel
+EXP-0970,Stationery and sticky notes order online,977.65,2025-08-31,Shopping
+EXP-0971,Monthly metro commute pass payment via debit card,994.03,2025-10-30,Travel
+EXP-0972,Morning coffee and cold coffee at A2B,121.17,2025-10-02,Food
+EXP-0973,Purchased USB-C cable from local electronics shop,1291.59,2026-03-14,Shopping
+EXP-0974,Flight ticket booking to Hyderabad,9177.8,2025-05-15,Travel
+EXP-0975,Monthly electricity bill payment via GPay yesterday,1171.37,2025-11-02,Utilities
+EXP-0976,Nykaa order for moisturizer,1080.76,2025-04-07,Shopping
+EXP-0977,Booked ride on Paytm Travel to Madurai,934.38,2026-03-26,Travel
+EXP-0978,Stationery and gel pens order online,644.22,2025-11-17,Shopping
+EXP-0979,Two-wheeler service and chain lube at Koramangala,868.85,2025-10-01,Travel
+EXP-0980,Chennai Metro ticket to office using credit card,65.75,2025-06-08,Travel
+EXP-0981,Monthly Prime shopping delivery order of bedsheet set using credit card,593.0,2025-08-29,Shopping
+EXP-0982,Airtel DTH annual pack renewal via debit card,3378.08,2025-05-25,Utilities
+EXP-0983,Paid cab bill online after trip to bus stand,377.85,2026-03-04,Travel
+EXP-0984,Bought cotton t-shirt during weekend mall visit,2897.67,2025-03-26,Shopping
+EXP-0985,Morning coffee and veg thali at Belgian Waffle today,106.25,2026-03-11,Food
+EXP-0986,Breakfast fried rice at Biryani Blues,332.94,2026-02-12,Food
+EXP-0987,Monthly Prime shopping delivery order of cushion covers,488.72,2026-03-04,Shopping
+EXP-0988,Fresh juice and pasta at Gachibowli cafe,343.11,2025-07-31,Food
+EXP-0989,Fresh juice and margherita pizza at Kothrud cafe using credit card,344.57,2025-01-16,Food
+EXP-0990,Purchased power bank from local electronics shop,1719.56,2026-03-17,Shopping
+EXP-0991,Tata Play DTH recharge online using credit card,711.89,2025-10-10,Utilities
+EXP-0992,Purchased phone case at Croma store using credit card,2347.9,2025-11-16,Shopping
+EXP-0993,Ordered cooking gas refill online via CRED,1033.02,2025-01-05,Utilities
+EXP-0994,Street food margherita pizza at Guindy market,135.34,2025-07-16,Food
+EXP-0995,Auto rickshaw fare from Indiranagar to Guindy via debit card,120.73,2025-04-30,Travel
+EXP-0996,BMTC bus pass monthly renewal using credit card,934.12,2026-01-03,Travel
+EXP-0997,RedBus sleeper ticket to Bengaluru for personal expense,1587.65,2025-11-18,Travel
+EXP-0998,TANGEDCO electricity bill for March via debit card,1957.34,2025-05-12,Utilities
+EXP-0999,Lenskart order for blue-light glasses today,3029.4,2025-06-27,Shopping
+EXP-1000,Two-wheeler service and chain lube at Bandra,1312.17,2025-03-25,Travel
+EXP-1001,Vi mobile recharge for August via UPI,722.35,2025-11-25,Utilities
+EXP-1002,Rapido bike taxi to office,94.13,2025-03-11,Travel
+EXP-1003,Apartment maintenance and utility charge for personal expense,2740.7,2025-10-03,Utilities
+EXP-1004,Zomato order for pav bhaji and beverages,488.8,2025-11-09,Food
+EXP-1005,Prepaid electricity meter recharge for personal expense,2497.22,2025-08-10,Utilities
+EXP-1006,Paid online for laptop backpack order,3678.55,2025-02-15,Shopping
+EXP-1007,Monthly meal subscription renewal online yesterday,1586.25,2026-02-08,Food
+EXP-1008,Ordered veg thali on Amazon Fresh,793.83,2025-10-04,Food
+EXP-1009,HP Gas cylinder refill payment this morning,1065.93,2026-03-11,Utilities
+EXP-1010,Ordered face wash from Amazon for personal expense,1368.16,2025-06-22,Shopping
+EXP-1011,Paid online for desk lamp order,2801.59,2025-05-14,Shopping
+EXP-1012,Ajio online order for winter jacket,1947.23,2025-02-24,Shopping
+EXP-1013,Paid for smartwatch at Reliance Digital,1317.7,2025-05-19,Shopping
+EXP-1014,Morning coffee and sandwich at Udupi Upahar,393.92,2025-05-02,Food
+EXP-1015,Tata Play DTH recharge online for personal expense,600.7,2025-07-30,Utilities
+EXP-1016,IRCTC train ticket booking to Hyderabad via UPI,1031.15,2026-01-07,Travel
+EXP-1017,Monthly electricity bill payment via BHIM UPI,3802.36,2025-04-30,Utilities
+EXP-1018,Chennai Metro ticket to city center via debit card,30.65,2026-01-29,Travel
+EXP-1019,Two-wheeler service and chain lube at Kothrud via UPI,995.1,2025-06-22,Travel
+EXP-1020,Ordered roll on Amazon Fresh,765.16,2026-01-15,Food
+EXP-1021,Airtel postpaid mobile recharge today,656.77,2025-11-02,Utilities
+EXP-1022,Bought gift mechanical keyboard for weekend gathering,2409.64,2025-11-22,Shopping
+EXP-1023,BSNL landline and broadband bill via debit card,1014.86,2025-09-27,Utilities
+EXP-1024,Dinner with friends at Dominos,1847.94,2025-09-19,Food
+EXP-1025,ACT Fibernet broadband monthly bill today,1064.16,2025-02-04,Utilities
+EXP-1026,Apartment maintenance and utility charge today,3524.21,2026-02-26,Utilities
+EXP-1027,Bought cotton t-shirt during weekend mall visit for personal expense,3307.2,2025-12-25,Shopping
+EXP-1028,IRCTC train ticket booking to Jaipur using credit card,376.28,2025-11-10,Travel
+EXP-1029,Ola Outstation trip to Hyderabad,3224.83,2025-11-27,Travel
+EXP-1030,Purchased desk lamp at Croma store,10221.48,2025-09-01,Shopping
+EXP-1031,Parking fee at Kempegowda terminal,61.46,2025-08-21,Travel
+EXP-1032,Bookstore purchase of hardcover notebook,325.36,2025-03-30,Shopping
+EXP-1033,Bought gift SSD drive for family dinner,1227.84,2025-12-15,Shopping
+EXP-1034,Ordered cold coffee on Amazon Fresh via UPI,825.48,2025-12-19,Food
+EXP-1035,Monthly electricity bill payment via Amazon Pay using credit card,2538.2,2026-01-18,Utilities
+EXP-1036,Purchased mechanical keyboard from local electronics shop,2324.75,2026-01-04,Shopping
+EXP-1037,Petrol refill for bike at Shell,902.27,2025-03-21,Travel
+EXP-1038,Ola Outstation trip to Coimbatore,5053.04,2025-04-22,Travel
+EXP-1039,Morning coffee and chicken biryani at Cream Stone,346.54,2025-08-30,Food
+EXP-1040,JioFiber internet subscription renewal via UPI,1348.28,2025-06-02,Utilities
+EXP-1041,Bought gift wireless headphones for team celebration,2285.48,2025-03-04,Shopping
+EXP-1042,MSEDCL home electricity bill payment,1303.79,2025-10-30,Utilities
+EXP-1043,Auto rickshaw fare from Salt Lake to IT Park,166.19,2025-08-19,Travel
+EXP-1044,Ordered trimmer online from Flipkart,2271.06,2025-04-09,Shopping
+EXP-1045,Piped natural gas bill via GPay,1551.2,2025-02-25,Utilities
+EXP-1046,Swiggy food delivery from Wow Momo this morning,557.23,2025-12-03,Food
+EXP-1047,Parking fee at Central Station,143.86,2025-07-14,Travel
+EXP-1048,Dinner with friends at Cream Stone via UPI,1398.98,2026-02-09,Food
+EXP-1049,Bought gift wireless headphones for anniversary,729.97,2025-10-09,Shopping
+EXP-1050,Bought denim jeans from Myntra,3493.1,2025-01-04,Shopping
+EXP-1051,Lenskart order for prescription frames via debit card,4495.08,2025-07-26,Shopping
+EXP-1052,Ola cab booking from Indiranagar to Central Station for personal expense,738.48,2025-12-01,Travel
+EXP-1053,Purchased laptop backpack on Amazon,3286.66,2025-06-10,Shopping
+EXP-1054,Flipkart Big Billion sale purchase of bluetooth speaker,3031.76,2025-07-15,Shopping
+EXP-1055,Bought backpack at Westside Gachibowli,891.27,2026-03-02,Shopping
+EXP-1056,Booked ride on Paytm Travel to Madurai via UPI,1930.96,2026-03-21,Travel
+EXP-1057,Bought gift USB-C cable for family dinner,1598.0,2025-12-09,Shopping
+EXP-1058,Diesel fuel payment at IndianOil today,4247.28,2025-10-17,Travel
+EXP-1059,Ajio online order for kurta set,1476.2,2025-05-07,Shopping
+EXP-1060,Monthly office canteen meal card recharge,1402.69,2025-09-18,Food
+EXP-1061,Dessert and ice cream order from Dominos for personal expense,403.98,2025-05-16,Food
+EXP-1062,Monthly Prime shopping delivery order of laundry basket,1930.62,2026-02-11,Shopping
+EXP-1063,Ordered noodles on Amazon Fresh for personal expense,637.36,2025-07-06,Food
+EXP-1064,Chennai Metro ticket to Kempegowda terminal using credit card,31.89,2025-02-06,Travel
+EXP-1065,Vi mobile recharge for January via debit card,669.57,2025-11-14,Utilities
+EXP-1066,Bakery cake and pastries for anniversary,1285.33,2026-01-31,Food
+EXP-1067,Ordered cooking gas refill online via BHIM UPI for personal expense,916.24,2026-02-06,Utilities
+EXP-1068,Ola Outstation trip to Kochi yesterday,5169.36,2025-02-12,Travel
+EXP-1069,FASTag toll recharge for highway trip this morning,1195.92,2026-03-16,Travel
+EXP-1070,Paid bill for team lunch at Pizza Hut this morning,1306.58,2025-10-07,Food
+EXP-1071,Purchased smartwatch at Croma store using credit card,8125.95,2025-03-10,Shopping
+EXP-1072,Street food chole bhature at Indiranagar market,188.48,2025-04-05,Food
+EXP-1073,Paid cab bill online after trip to office,563.35,2025-10-02,Travel
+EXP-1074,Paid online for momos delivery from Swiggy,218.39,2025-11-26,Food
+EXP-1075,Lunch shawarma at Biryani Blues,413.93,2025-12-08,Food
+EXP-1076,Ajio online order for chinos,1453.59,2025-11-01,Shopping
+EXP-1077,Indane LPG cooking gas cylinder booking via UPI,991.84,2025-03-15,Utilities
+EXP-1078,Weekend biryani order from McDonalds,604.55,2025-05-26,Food
+EXP-1079,Stationery and printer paper order online for personal expense,656.99,2026-01-07,Shopping
+EXP-1080,Dessert and ice cream order from Haldirams,335.04,2025-05-21,Food
+EXP-1081,Airtel DTH annual pack renewal using credit card,2090.26,2025-09-30,Utilities
+EXP-1082,Purchased desk lamp at Croma store today,1365.82,2025-03-26,Shopping
+EXP-1083,Paid cab bill online after trip to Central Station via debit card,412.97,2025-10-30,Travel
+EXP-1084,TANGEDCO electricity bill for October,3732.11,2025-08-20,Utilities
+EXP-1085,Purchased laptop backpack at Croma store,2023.96,2025-12-04,Shopping
+EXP-1086,Bought running shoes during weekend mall visit today,2731.45,2026-01-21,Shopping
+EXP-1087,Purchased electric kettle at Croma store yesterday,1953.63,2025-05-04,Shopping
+EXP-1088,Ajio online order for formal shirt via UPI,2007.35,2025-07-12,Shopping
+EXP-1089,JioFiber internet subscription renewal this morning,681.55,2025-11-15,Utilities
+EXP-1090,TANGEDCO electricity bill for January yesterday,3096.23,2025-02-09,Utilities
+EXP-1091,Stationery and printer paper order online via UPI,530.16,2025-04-20,Shopping
+EXP-1092,Ordered pizza online from Belgian Waffle today,527.78,2025-02-17,Food
+EXP-1093,Petrol refill for bike at Shell this morning,381.6,2025-01-30,Travel
+EXP-1094,Bought chinos from Myntra using credit card,2769.26,2025-10-30,Shopping
+EXP-1095,Purchased tripod stand at Croma store,10768.22,2025-11-26,Shopping
+EXP-1096,Street food shawarma at Velachery market yesterday,189.51,2025-06-30,Food
+EXP-1097,Breakfast idli vada at Biryani Blues this morning,268.29,2025-05-06,Food
+EXP-1098,Paid online for veg thali delivery from Swiggy,231.6,2025-03-18,Food
+EXP-1099,Airtel postpaid mobile recharge yesterday,737.24,2025-01-15,Utilities
+EXP-1100,Ola cab booking from Adyar to airport,631.87,2025-06-19,Travel
+EXP-1101,Vi mobile recharge for March using credit card,470.73,2025-12-06,Utilities
+EXP-1102,Two-wheeler service and chain lube at Adyar yesterday,1249.38,2025-03-17,Travel
+EXP-1103,Monthly water bill payment for apartment using credit card,422.68,2025-05-24,Utilities
+EXP-1104,Dessert and ice cream order from Pizza Hut,450.82,2025-02-25,Food
+EXP-1105,Metro smart card recharge at Velachery station,294.78,2025-07-09,Travel
+EXP-1106,Paid online for sandwich delivery from Swiggy,697.84,2025-06-08,Food
+EXP-1107,Ordered cooking gas refill online via Paytm this morning,994.61,2026-01-03,Utilities
+EXP-1108,Apartment maintenance and utility charge via UPI,4221.26,2025-05-25,Utilities
+EXP-1109,Monthly electricity bill payment via PhonePe via debit card,3085.88,2025-09-07,Utilities
+EXP-1110,Ordered cooking gas refill online via BHIM UPI,850.69,2025-01-28,Utilities
+EXP-1111,Bought gift SSD drive for team celebration via UPI,1839.21,2026-03-04,Shopping
+EXP-1112,Monthly water bill payment for apartment yesterday,724.67,2025-09-17,Utilities
+EXP-1113,Piped natural gas bill via BHIM UPI for personal expense,977.79,2025-12-26,Utilities
+EXP-1114,Bought denim jeans during weekend mall visit,1917.66,2025-04-04,Shopping
+EXP-1115,Bought gift bluetooth speaker for family dinner,1166.36,2025-09-06,Shopping
+EXP-1116,Bookstore purchase of exam prep guide via UPI,732.16,2025-07-16,Shopping
+EXP-1117,Monthly electricity bill payment via BHIM UPI yesterday,2050.41,2025-07-19,Utilities
+EXP-1118,Ola Outstation trip to Mysuru,3568.15,2025-07-05,Travel
+EXP-1119,BSNL landline and broadband bill using credit card,734.82,2026-02-05,Utilities
+EXP-1120,Monthly water bill payment for apartment for personal expense,403.2,2025-09-29,Utilities
+EXP-1121,Vi mobile recharge for April via UPI,762.1,2025-07-07,Utilities
+EXP-1122,Monthly office canteen meal card recharge via debit card,1787.8,2025-03-28,Food
+EXP-1123,Piped natural gas bill via CRED today,1570.71,2025-04-25,Utilities
+EXP-1124,Lenskart order for polarized sunglasses,1306.59,2026-03-15,Shopping
+EXP-1125,Ordered chole bhature online via Zomato today,222.65,2025-11-26,Food
+EXP-1126,Ordered hair serum from Amazon yesterday,242.62,2025-04-03,Shopping
+EXP-1127,Street food idli vada at Andheri market,111.65,2025-07-02,Food
+EXP-1128,Municipal property water tax online for personal expense,916.15,2026-03-01,Utilities
+EXP-1129,South Indian thali lunch at A2B via UPI,438.75,2025-01-09,Food
+EXP-1130,Monthly electricity bill payment via Paytm,3653.33,2025-01-18,Utilities
+EXP-1131,Purchased electric kettle at Croma store using credit card,11985.93,2025-01-22,Shopping
+EXP-1132,Purchased electric kettle from local electronics shop via debit card,2264.13,2025-04-01,Shopping
+EXP-1133,Prepaid electricity meter recharge,2292.24,2025-08-08,Utilities
+EXP-1134,Auto rickshaw fare from Whitefield to Electronic City,209.22,2025-07-18,Travel
+EXP-1135,Lenskart order for prescription frames,1233.34,2025-08-25,Shopping
+EXP-1136,Ola Outstation trip to Mumbai,4397.41,2025-11-06,Travel
+EXP-1137,Flight ticket booking to Pune today,4192.95,2025-12-03,Travel
+EXP-1138,Local suburban train pass renewal,571.17,2025-08-23,Travel
+EXP-1139,Monthly electricity bill payment via Paytm this morning,2483.43,2026-01-05,Utilities
+EXP-1140,Two-wheeler service and chain lube at HSR Layout,1191.01,2026-02-03,Travel
+EXP-1141,Ola Outstation trip to Pune,3783.45,2025-08-05,Travel
+EXP-1142,Uber ride to Electronic City,480.3,2025-11-07,Travel
+EXP-1143,Vi mobile recharge for April,425.27,2025-07-02,Utilities
+EXP-1144,Booked ride on Paytm Travel to Kochi for personal expense,1141.26,2025-02-27,Travel
+EXP-1145,Parking fee at office,153.53,2025-07-08,Travel
+EXP-1146,Evening snacks and tea near Kothrud,193.61,2025-03-24,Food
+EXP-1147,Ordered door mat via Amazon Prime,2158.28,2025-11-15,Shopping
+EXP-1148,Morning coffee and idli vada at KFC,140.92,2025-10-27,Food
+EXP-1149,Vi mobile recharge for May today,296.29,2025-06-16,Utilities
+EXP-1150,Ordered wireless mouse online from Flipkart,3477.64,2025-09-03,Shopping
+EXP-1151,Lunch chole bhature at Subway,634.47,2025-12-08,Food
+EXP-1152,Purchased tripod stand from local electronics shop,2441.88,2026-02-08,Shopping
+EXP-1153,Metro smart card recharge at Jayanagar station via UPI,966.74,2025-04-12,Travel
+EXP-1154,Purchased tripod stand from local electronics shop via debit card,2617.72,2025-11-03,Shopping
+EXP-1155,Metro smart card recharge at T Nagar station today,233.88,2025-09-28,Travel
+EXP-1156,Jio prepaid mobile plan recharge via UPI,502.79,2025-01-12,Utilities
+EXP-1157,Paid cab bill online after trip to tech park,425.33,2025-07-08,Travel
+EXP-1158,Municipal property water tax online this morning,1947.27,2025-04-28,Utilities
+EXP-1159,Ola Outstation trip to Pune this morning,3585.52,2026-01-06,Travel
+EXP-1160,Piped natural gas bill via Paytm via UPI,1333.78,2025-08-07,Utilities
+EXP-1161,Zomato order for sandwich and beverages,471.23,2025-12-30,Food
+EXP-1162,Bought chinos during weekend mall visit via debit card,3714.08,2025-08-18,Shopping
+EXP-1163,TANGEDCO electricity bill for May using credit card,2175.87,2025-08-02,Utilities
+EXP-1164,Bought gift tripod stand for weekend gathering,1581.59,2025-11-13,Shopping
+EXP-1165,Bakery cake and pastries for birthday,464.6,2026-02-25,Food
+EXP-1166,Dessert and ice cream order from Sangeetha Veg using credit card,237.07,2025-09-12,Food
+EXP-1167,Ordered cooking gas refill online via CRED for personal expense,1013.36,2025-07-11,Utilities
+EXP-1168,Rapido bike taxi to city center for personal expense,167.45,2025-06-25,Travel
+EXP-1169,Street food filter coffee at Koramangala market,53.75,2025-03-11,Food
+EXP-1170,Monthly electricity bill payment via CRED using credit card,2979.06,2025-05-03,Utilities
+EXP-1171,Lunch fried rice at Pizza Hut,279.8,2025-02-26,Food
+EXP-1172,Late night cold coffee delivery via EatSure,632.28,2026-03-23,Food
+EXP-1173,Flight ticket booking to Madurai,5494.41,2025-04-22,Travel
+EXP-1174,Ordered noodles online via Zomato,764.06,2025-09-26,Food
+EXP-1175,Dinner with friends at Chai Point,2258.75,2025-07-19,Food
+EXP-1176,Fresh juice and margherita pizza at Whitefield cafe using credit card,299.9,2025-10-13,Food
+EXP-1177,Monthly water bill payment for apartment this morning,720.59,2025-03-06,Utilities
+EXP-1178,Uber ride to Guindy today,188.37,2026-01-15,Travel
+EXP-1179,Auto rickshaw fare from Bandra to Central Station,199.61,2025-11-17,Travel
+EXP-1180,Jio prepaid mobile plan recharge today,846.64,2025-09-21,Utilities
+EXP-1181,Lunch paneer wrap at Saravana Bhavan for personal expense,464.42,2025-03-28,Food
+EXP-1182,Bought gift trimmer for birthday via UPI,823.47,2025-03-10,Shopping
+EXP-1183,Breakfast momos at Biryani Blues,193.16,2025-07-15,Food
+EXP-1184,TANGEDCO electricity bill for November,2356.52,2025-09-01,Utilities
+EXP-1185,Municipal property water tax online via debit card,1082.02,2025-10-09,Utilities
+EXP-1186,Purchased trimmer at Croma store,7617.9,2025-03-30,Shopping
+EXP-1187,Vi mobile recharge for May via debit card,325.26,2025-09-24,Utilities
+EXP-1188,Paid cab bill online after trip to IT Park,269.59,2025-12-23,Travel
+EXP-1189,Monthly meal subscription renewal online,2010.69,2025-05-07,Food
+EXP-1190,Auto rickshaw fare from T Nagar to airport,79.19,2025-03-05,Travel
+EXP-1191,Ordered pizza online from Belgian Waffle,489.33,2026-02-23,Food
+EXP-1192,Bought hoodie at Westside T Nagar,812.65,2025-11-11,Shopping
+EXP-1193,Piped natural gas bill via BHIM UPI,694.31,2025-12-23,Utilities
+EXP-1194,Ordered idli vada online via Zomato,617.93,2025-10-04,Food
+EXP-1195,Purchased wireless headphones from local electronics shop,1786.92,2025-01-23,Shopping
+EXP-1196,Purchased SSD drive from local electronics shop,2788.56,2025-09-07,Shopping
+EXP-1197,Late night margherita pizza delivery via EatSure via UPI,668.05,2026-03-17,Food
+EXP-1198,Breakfast masala dosa at Saravana Bhavan,161.26,2025-07-30,Food
+EXP-1199,Paid cab bill online after trip to Cyber Hub,263.82,2025-08-26,Travel
+EXP-1200,Bookstore purchase of programming book for personal expense,1392.05,2025-11-02,Shopping
