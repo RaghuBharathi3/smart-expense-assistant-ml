@@ -11,7 +11,7 @@ from typing import Any
 import gradio as gr
 import pandas as pd
 
-from src.backend.router import execute_tool_call
+from src.backend.router import execute_tool_call, process_query
 from src.backend.tools import get_expenses
 from src.classifier.predict import predict
 from src.config import ALLOWED_CATEGORIES
@@ -24,7 +24,6 @@ from src.interface.charts import (
     top_categories_chart,
 )
 from src.llm.respond import format_inr, generate_response
-from src.llm.router_llm import route_query
 
 SAMPLE_QUERIES = [
     ("Food in November", "How much did I spend on food in November?"),
@@ -331,46 +330,15 @@ def _build_inspector_card(fn: str, res: Any) -> str:
     return DEFAULT_INSPECTOR_HTML
 
 
-def handle_chat_query(
-    user_message: str,
-    history: list[dict[str, str]] | None,
+def _format_chat_outcome(
+    user_label: str,
+    tool_output: dict[str, Any],
+    chat_history: list[dict[str, str]],
 ) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
-    """Process User -> LLM Router -> Backend Router -> LLM Response with progressive disclosure."""
-    chat_history = list(history or [])
+    """Update chat history, progressive disclosure table/chart, and inspector card."""
     empty_df = pd.DataFrame(columns=["expense_id", "description", "amount", "date", "category"])
-
-    if not isinstance(user_message, str) or not user_message.strip():
-        feedback = "<div class='ea-feedback error'>Please enter a question or expense description.</div>"
-        return (
-            "",
-            chat_history,
-            gr.update(visible=False, value=empty_df),
-            gr.update(visible=False, value=None),
-            feedback,
-            "",
-            DEFAULT_INSPECTOR_HTML,
-        )
-
-    query = user_message.strip()
-    routed = route_query(query)
-    if not routed.get("function"):
-        reply = routed.get("error", "Unsupported query.")
-        chat_history.append({"role": "user", "content": query})
-        chat_history.append({"role": "assistant", "content": reply})
-        feedback = f"<div class='ea-feedback error'>{html.escape(reply)}</div>"
-        return (
-            "",
-            chat_history,
-            gr.update(visible=False, value=empty_df),
-            gr.update(visible=False, value=None),
-            feedback,
-            query,
-            DEFAULT_INSPECTOR_HTML,
-        )
-
-    tool_output = execute_tool_call(routed)
-    answer = generate_response(tool_output)
-    chat_history.append({"role": "user", "content": query})
+    answer = str(tool_output.get("answer") or generate_response(tool_output))
+    chat_history.append({"role": "user", "content": user_label})
     chat_history.append({"role": "assistant", "content": answer})
 
     if not tool_output.get("ok"):
@@ -381,7 +349,7 @@ def handle_chat_query(
             gr.update(visible=False, value=empty_df),
             gr.update(visible=False, value=None),
             feedback,
-            query,
+            user_label,
             DEFAULT_INSPECTOR_HTML,
         )
 
@@ -408,7 +376,45 @@ def handle_chat_query(
             value=monthly_comparison_chart(_load_df(), int(res["month_a"]), int(res["month_b"])),
         )
 
-    return "", chat_history, table_update, chart_update, feedback, query, inspector_html
+    return "", chat_history, table_update, chart_update, feedback, user_label, inspector_html
+
+
+def handle_chat_query(
+    user_message: str,
+    history: list[dict[str, str]] | None,
+) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
+    """Send user query strictly to Python backend (process_query) and render results."""
+    chat_history = list(history or [])
+    empty_df = pd.DataFrame(columns=["expense_id", "description", "amount", "date", "category"])
+
+    if not isinstance(user_message, str) or not user_message.strip():
+        feedback = "<div class='ea-feedback error'>Please enter a question or expense description.</div>"
+        return (
+            "",
+            chat_history,
+            gr.update(visible=False, value=empty_df),
+            gr.update(visible=False, value=None),
+            feedback,
+            "",
+            DEFAULT_INSPECTOR_HTML,
+        )
+
+    query = user_message.strip()
+    tool_output = process_query(query)
+    return _format_chat_outcome(query, tool_output, chat_history)
+
+
+def handle_qwen_json_test(
+    raw_json: str,
+    history: list[dict[str, str]] | None,
+) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
+    """Execute a raw Qwen2.5 JSON payload directly through the Python backend."""
+    chat_history = list(history or [])
+    tool_output = process_query("", llm_json=raw_json)
+    _, updated_hist, tbl, chrt, fb, _, insp = _format_chat_outcome(
+        f"Qwen JSON: {raw_json.strip()}", tool_output, chat_history
+    )
+    return raw_json, updated_hist, tbl, chrt, fb, "", insp
 
 
 def filter_ledger(category: str, search_text: str) -> pd.DataFrame:
@@ -529,6 +535,14 @@ def create_app() -> gr.Blocks:
                             for label, full_q in SAMPLE_QUERIES[3:]:
                                 sample_btns.append((full_q, gr.Button(label, size="sm")))
 
+                        with gr.Accordion("Integration Tester: Run Raw Qwen2.5 JSON", open=False):
+                            qwen_json_box = gr.Textbox(
+                                label="Qwen JSON Output",
+                                lines=6,
+                                value='{\n    "intent": "calculate_spending",\n    "category": "Food",\n    "month": "November",\n    "amount": null,\n    "description": null\n}',
+                            )
+                            qwen_run_btn = gr.Button("Run Qwen JSON via Backend", size="sm")
+
                     with gr.Column(scale=2):
                         inspector_html = gr.HTML(DEFAULT_INSPECTOR_HTML)
                         chat_chart = gr.Plot(label="Visual Breakdown", visible=False)
@@ -585,6 +599,12 @@ def create_app() -> gr.Blocks:
                         outputs=outputs_chat,
                         show_progress="minimal",
                     )
+                qwen_run_btn.click(
+                    fn=handle_qwen_json_test,
+                    inputs=[qwen_json_box, chatbot],
+                    outputs=[qwen_json_box, chatbot, chat_table, chat_chart, feedback_html, last_query_state, inspector_html],
+                    show_progress="minimal",
+                )
 
             with gr.Tab("Analytics Dashboard"):
                 kpi_html = gr.HTML(_build_kpi_html(df_init))

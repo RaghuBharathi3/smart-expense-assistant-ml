@@ -3,6 +3,7 @@ joblib==1.5.3
 numpy==2.4.4
 pandas==3.0.2
 plotly==6.7.0
+pydantic==2.13.3
 pytest==9.0.3
 requests==2.33.1
 scikit-learn==1.8.0
