@@ -1,17 +1,15 @@
-"""Apple-level minimal Gradio interface for Smart Expense Assistant."""
+"""Apple-inspired minimal Streamlit application for Smart Expense Assistant."""
 
 from __future__ import annotations
 
 import html
-import tempfile
-from datetime import date
-from pathlib import Path
+from datetime import date, datetime
 from typing import Any
 
-import gradio as gr
 import pandas as pd
+import streamlit as st
 
-from src.backend.router import execute_tool_call, process_query
+from src.backend.router import _LLM_HANDLER, execute_tool_call, process_query
 from src.backend.tools import get_expenses
 from src.classifier.predict import predict
 from src.config import ALLOWED_CATEGORIES
@@ -23,7 +21,7 @@ from src.interface.charts import (
     monthly_trend_chart,
     top_categories_chart,
 )
-from src.llm.respond import format_inr, generate_response
+from src.llm.respond import format_inr
 
 SAMPLE_QUERIES = [
     ("Food in November", "How much did I spend on food in November?"),
@@ -35,209 +33,137 @@ SAMPLE_QUERIES = [
 ]
 
 CUSTOM_CSS = """
-@keyframes eaFadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-.gradio-container {
-    max-width: 1180px !important;
-    margin: 0 auto !important;
-    padding: 8px 20px 28px 20px !important;
-    background-color: #F5F5F7 !important;
-    color: #1D1D1F !important;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", system-ui, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-    color-scheme: light !important;
-}
-
-footer { display: none !important; }
-
-.ea-topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 14px 0 14px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 14px;
-}
-
-.ea-title {
-    font-size: 1.38rem;
-    font-weight: 600;
-    color: #1D1D1F;
-    letter-spacing: -0.022em;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.ea-subtitle {
-    font-size: 0.85rem;
-    color: #6E6E73;
-    margin: 3px 0 0 0;
-}
-
-.ea-status-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 999px;
-    padding: 5px 13px;
-    font-size: 0.76rem;
-    font-weight: 500;
-    color: #1D1D1F;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-}
-
-.ea-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: #0F766E;
-    display: inline-block;
-}
-
-.ea-card {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 12px;
-    padding: 16px 18px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-    animation: eaFadeIn 0.2s ease-out;
-}
-
-.ea-kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-    margin: 4px 0 16px 0;
-    animation: eaFadeIn 0.22s ease-out;
-}
-
-.ea-kpi-card {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 12px;
-    padding: 16px 18px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-    transition: transform 0.18s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.18s ease;
-}
-
-.ea-kpi-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-}
-
-.ea-kpi-label {
-    font-size: 0.71rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.045em;
-    color: #6E6E73;
-    margin-bottom: 6px;
-}
-
-.ea-kpi-value {
-    font-size: 1.32rem;
-    font-weight: 600;
-    color: #1D1D1F;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -0.015em;
-}
-
-.ea-kpi-sub {
-    font-size: 0.76rem;
-    color: #6E6E73;
-    margin-top: 4px;
-}
-
-.ea-feedback {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-left: 3px solid #0F766E;
-    border-radius: 8px;
-    padding: 9px 13px;
-    font-size: 0.83rem;
-    color: #1D1D1F;
-    animation: eaFadeIn 0.18s ease-out;
-}
-
-.ea-feedback.error {
-    background: #FEF2F2;
-    border-color: #FECACA;
-    border-left-color: #B91C1C;
-    color: #991B1B;
-}
-
-.ea-preview-pill {
-    display: inline-block;
-    background: #F2F2F7;
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 8px;
-    padding: 7px 12px;
-    font-size: 0.81rem;
-    color: #1D1D1F;
-}
-
-.tab-nav button {
-    font-weight: 500 !important;
-    font-size: 0.9rem !important;
-    color: #6E6E73 !important;
-    padding: 8px 14px !important;
-    transition: color 0.15s ease !important;
-}
-
-.tab-nav button.selected {
-    color: #1D1D1F !important;
-    font-weight: 600 !important;
-    border-bottom: 2px solid #0066CC !important;
-}
-
-button {
-    border-radius: 8px !important;
-    font-weight: 500 !important;
-    transition: transform 0.12s ease, background-color 0.15s ease, border-color 0.15s ease !important;
-}
-
-button:active {
-    transform: scale(0.985) !important;
-}
-
-button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 2px solid #0066CC !important;
-    outline-offset: 2px !important;
-}
-
-@media (max-width: 768px) {
-    .gradio-container {
-        padding: 6px 12px 20px 12px !important;
+<style>
+    html, body, [class*="css"] {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", system-ui, sans-serif;
+        color: #1D1D1F;
+        -webkit-font-smoothing: antialiased;
     }
-    .ea-kpi-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .stApp {
+        background-color: #F5F5F7;
     }
-}
-"""
-
-DEFAULT_INSPECTOR_HTML = """
-<div class="ea-card">
-    <div class="ea-kpi-label">Assistant Workspace</div>
-    <div style="font-size:0.95rem;font-weight:600;color:#1D1D1F;margin-bottom:8px;">
-        Ready for Expense Queries
-    </div>
-    <p style="font-size:0.83rem;color:#6E6E73;line-height:1.5;margin:0 0 10px 0;">
-        Ask a natural-language question or select a quick prompt. Matching charts, category breakdowns,
-        and transaction tables will appear here automatically.
-    </p>
-    <div style="font-size:0.78rem;color:#6E6E73;border-top:1px solid #F2F2F7;padding-top:10px;line-height:1.6;">
-        <b>Coverage:</b> Jan 2025 – Mar 2026<br>
-        <b>Categories:</b> Food · Travel · Shopping · Utilities<br>
-        <b>Currency:</b> Indian Rupees (₹)
-    </div>
-</div>
+    .block-container {
+        max-width: 1180px;
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .ea-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        margin-bottom: 14px;
+    }
+    .ea-title {
+        font-size: 1.45rem;
+        font-weight: 600;
+        color: #1D1D1F;
+        letter-spacing: -0.022em;
+        margin: 0;
+    }
+    .ea-subtitle {
+        font-size: 0.86rem;
+        color: #6E6E73;
+        margin: 3px 0 0 0;
+    }
+    .ea-status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 999px;
+        padding: 5px 13px;
+        font-size: 0.76rem;
+        font-weight: 500;
+        color: #1D1D1F;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+    .ea-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #0F766E;
+        display: inline-block;
+    }
+    .ea-kpi-card {
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        border-radius: 12px;
+        padding: 15px 17px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .ea-kpi-card:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+    .ea-kpi-label {
+        font-size: 0.71rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.045em;
+        color: #6E6E73;
+        margin-bottom: 5px;
+    }
+    .ea-kpi-value {
+        font-size: 1.32rem;
+        font-weight: 600;
+        color: #1D1D1F;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.015em;
+    }
+    .ea-kpi-sub {
+        font-size: 0.76rem;
+        color: #6E6E73;
+        margin-top: 4px;
+    }
+    .ea-preview-pill {
+        display: inline-block;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-left: 3px solid #0066CC;
+        border-radius: 8px;
+        padding: 8px 13px;
+        font-size: 0.83rem;
+        color: #1D1D1F;
+        margin: 4px 0 10px 0;
+    }
+    .stButton > button {
+        background-color: #FFFFFF;
+        color: #1D1D1F;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+    }
+    .stButton > button:hover {
+        background-color: #F2F2F7;
+        border-color: #0066CC;
+        color: #1D1D1F;
+    }
+    .stButton > button:active {
+        transform: scale(0.985);
+    }
+    .stButton > button:focus-visible {
+        outline: 2px solid #0066CC;
+        outline-offset: 2px;
+    }
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+            padding-top: 1rem;
+        }
+        .ea-kpi-value {
+            font-size: 1.12rem;
+        }
+    }
+</style>
 """
 
 
@@ -248,9 +174,195 @@ def _load_df() -> pd.DataFrame:
     )
 
 
-def _build_kpi_html(df: pd.DataFrame) -> str:
+def _format_indian_date(iso_date: str) -> str:
+    try:
+        return datetime.strptime(str(iso_date).strip(), "%Y-%m-%d").strftime("%d %b %Y")
+    except ValueError:
+        return str(iso_date)
+
+
+def _render_kpi_card(col: Any, label: str, value: str, subtitle: str) -> None:
+    col.markdown(
+        f"""
+        <div class="ea-kpi-card">
+            <div class="ea-kpi-label">{html.escape(label)}</div>
+            <div class="ea-kpi-value">{html.escape(value)}</div>
+            <div class="ea-kpi-sub">{html.escape(subtitle)}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def _render_structured_result(tool_output: dict[str, Any], df: pd.DataFrame, key_prefix: str) -> None:
+    """Render structured cards, interactive charts, or tables inside a chat message."""
+    if not tool_output.get("ok"):
+        return
+    fn = tool_output.get("function")
+    res = tool_output.get("result")
+
+    if fn == "categorize_expense" and isinstance(res, dict):
+        c1, c2 = st.columns(2)
+        c1.metric("Predicted Category", str(res.get("category", "")))
+        conf = float(res.get("confidence", 0.0))
+        c2.metric("Confidence", f"{conf:.1%}")
+        st.progress(min(max(conf, 0.0), 1.0))
+
+    elif fn == "get_highest_category" and isinstance(res, dict) and res.get("category"):
+        c1, c2 = st.columns(2)
+        c1.metric("Top Category", str(res["category"]))
+        c2.metric("Total Spend", format_inr(float(res["amount"])))
+
+    elif fn == "calculate_spending" and res is not None:
+        st.metric("Total Calculated Spend", format_inr(float(res)))
+
+    elif fn == "get_category_breakdown" and isinstance(res, dict) and res:
+        st.plotly_chart(
+            breakdown_dict_chart(res, "Category Breakdown"),
+            use_container_width=True,
+            key=f"{key_prefix}_breakdown",
+        )
+
+    elif fn == "compare_months" and isinstance(res, dict):
+        c1, c2, c3 = st.columns(3)
+        c1.metric(f"Month {res['month_a']}", format_inr(float(res["total_a"])))
+        c2.metric(f"Month {res['month_b']}", format_inr(float(res["total_b"])))
+        c3.metric("Change", f"{float(res['percent_change']):+.1f}%")
+        st.plotly_chart(
+            monthly_comparison_chart(df, int(res["month_a"]), int(res["month_b"])),
+            use_container_width=True,
+            key=f"{key_prefix}_compare",
+        )
+
+    elif fn == "get_expenses" and isinstance(res, list):
+        if res:
+            df_res = pd.DataFrame(res).copy()
+            df_res["Date"] = df_res["date"].apply(_format_indian_date)
+            df_res["Amount"] = df_res["amount"].apply(lambda x: format_inr(float(x)))
+            st.dataframe(
+                df_res[["Date", "description", "category", "Amount"]].rename(
+                    columns={"description": "Description", "category": "Category"}
+                ),
+                use_container_width=True,
+                hide_index=True,
+            )
+        else:
+            st.info("No matching expense records found.")
+
+
+def _init_session_state() -> None:
+    if "conversations" not in st.session_state:
+        st.session_state.conversations = {"Chat 1": []}
+    if "active_chat" not in st.session_state:
+        st.session_state.active_chat = "Chat 1"
+    if "pending_query" not in st.session_state:
+        st.session_state.pending_query = None
+    if "pending_qwen_json" not in st.session_state:
+        st.session_state.pending_qwen_json = None
+
+
+def _render_sidebar() -> None:
+    with st.sidebar:
+        st.subheader("Workspace")
+        if st.button("+ New Conversation", use_container_width=True):
+            name = f"Chat {len(st.session_state.conversations) + 1}"
+            st.session_state.conversations[name] = []
+            st.session_state.active_chat = name
+            st.rerun()
+
+        chat_names = list(st.session_state.conversations.keys())
+        st.session_state.active_chat = st.radio(
+            "Conversations",
+            chat_names,
+            index=chat_names.index(st.session_state.active_chat),
+            label_visibility="collapsed",
+        )
+
+        if st.button("Clear Current Chat", use_container_width=True):
+            st.session_state.conversations[st.session_state.active_chat] = []
+            st.rerun()
+
+        st.divider()
+        engine_label = "Live Qwen2.5 Handler" if _LLM_HANDLER is not None else "Python Backend + Offline Router"
+        st.caption("Routing Engine")
+        st.info(engine_label)
+
+        with st.expander("Test Raw Qwen2.5 JSON"):
+            raw_json = st.text_area(
+                "JSON Payload",
+                value='{\n  "intent": "calculate_spending",\n  "category": "Food",\n  "month": "November",\n  "amount": null,\n  "description": null\n}',
+                height=160,
+            )
+            if st.button("Run Qwen JSON", use_container_width=True):
+                st.session_state.pending_qwen_json = raw_json
+
+
+def _render_assistant_tab(df: pd.DataFrame) -> None:
+    st.markdown("**Quick Prompts**")
+    cols = st.columns(3)
+    for idx, (label, full_query) in enumerate(SAMPLE_QUERIES):
+        if cols[idx % 3].button(label, key=f"quick_{idx}", use_container_width=True):
+            st.session_state.pending_query = full_query
+
+    history: list[dict[str, Any]] = st.session_state.conversations[st.session_state.active_chat]
+
+    for idx, msg in enumerate(history):
+        with st.chat_message(msg["role"]):
+            if msg["role"] == "assistant":
+                out = msg.get("output", {})
+                if not out.get("ok"):
+                    st.error(msg["content"])
+                    if st.button("Retry", key=f"retry_{idx}") and idx > 0:
+                        st.session_state.pending_query = history[idx - 1]["content"]
+                        st.rerun()
+                else:
+                    st.markdown(msg["content"])
+                    _render_structured_result(out, df, key_prefix=f"hist_{idx}")
+            else:
+                st.markdown(msg["content"])
+
+    typed_query = st.chat_input("Ask anything about your expenses (e.g., 'How much did I spend on food in November?')")
+    qwen_raw = st.session_state.pending_qwen_json
+    st.session_state.pending_qwen_json = None
+
+    query_to_run = typed_query or st.session_state.pending_query
+    st.session_state.pending_query = None
+
+    if qwen_raw:
+        user_label = f"Qwen JSON: `{qwen_raw.strip()}`"
+        history.append({"role": "user", "content": user_label})
+        with st.chat_message("user"):
+            st.markdown(user_label)
+        with st.chat_message("assistant"):
+            with st.spinner("Executing Qwen JSON via backend..."):
+                out = process_query("", llm_json=qwen_raw)
+            if not out.get("ok"):
+                st.error(out["answer"])
+            else:
+                st.markdown(out["answer"])
+                _render_structured_result(out, df, key_prefix=f"live_{len(history)}")
+        history.append({"role": "assistant", "content": out["answer"], "output": out})
+
+    elif query_to_run:
+        history.append({"role": "user", "content": query_to_run})
+        with st.chat_message("user"):
+            st.markdown(query_to_run)
+        with st.chat_message("assistant"):
+            with st.spinner("Analyzing expenses..."):
+                out = process_query(query_to_run)
+            if not out.get("ok"):
+                st.error(out["answer"])
+            else:
+                st.markdown(out["answer"])
+                _render_structured_result(out, df, key_prefix=f"live_{len(history)}")
+        history.append({"role": "assistant", "content": out["answer"], "output": out})
+
+
+def _render_dashboard_tab(df: pd.DataFrame) -> None:
     if df.empty:
-        return "<div class='ea-kpi-card'>No expense records available.</div>"
+        st.warning("No expense records available.")
+        return
+
     total = float(df["amount"].sum())
     dates = pd.to_datetime(df["date"], errors="coerce")
     latest_period = dates.dt.to_period("M").max()
@@ -260,489 +372,162 @@ def _build_kpi_html(df: pd.DataFrame) -> str:
     top_amt = float(cat_totals.iloc[0])
     avg_daily = total / max(int(dates.dt.date.nunique()), 1)
 
-    return f"""
-    <div class="ea-kpi-grid">
-        <div class="ea-kpi-card">
-            <div class="ea-kpi-label">Total Expenses</div>
-            <div class="ea-kpi-value">{format_inr(total)}</div>
-            <div class="ea-kpi-sub">{len(df):,} recorded entries</div>
-        </div>
-        <div class="ea-kpi-card">
-            <div class="ea-kpi-label">Latest Month ({latest_period.strftime('%b %Y')})</div>
-            <div class="ea-kpi-value">{format_inr(latest_spend)}</div>
-            <div class="ea-kpi-sub">Most recent period</div>
-        </div>
-        <div class="ea-kpi-card">
-            <div class="ea-kpi-label">Top Category</div>
-            <div class="ea-kpi-value">{html.escape(top_cat)}</div>
-            <div class="ea-kpi-sub">{format_inr(top_amt)} total</div>
-        </div>
-        <div class="ea-kpi-card">
-            <div class="ea-kpi-label">Average Daily Spend</div>
-            <div class="ea-kpi-value">{format_inr(avg_daily)}</div>
-            <div class="ea-kpi-sub">Across active days</div>
-        </div>
-    </div>
-    """
+    k1, k2, k3, k4 = st.columns(4)
+    _render_kpi_card(k1, "Total Expenses", format_inr(total), f"{len(df):,} recorded entries")
+    _render_kpi_card(k2, f"Latest ({latest_period.strftime('%b %Y')})", format_inr(latest_spend), "Most recent period")
+    _render_kpi_card(k3, "Top Category", top_cat, f"{format_inr(top_amt)} total")
+    _render_kpi_card(k4, "Avg Daily Spend", format_inr(avg_daily), "Across active days")
 
+    st.markdown("")
+    r1_a, r1_b = st.columns(2)
+    r1_a.plotly_chart(category_distribution_chart(df), use_container_width=True, key="dash_donut")
+    r1_b.plotly_chart(monthly_trend_chart(df), use_container_width=True, key="dash_trend")
 
-def _build_inspector_card(fn: str, res: Any) -> str:
-    if fn == "calculate_spending":
-        return f"""
-        <div class="ea-card">
-            <div class="ea-kpi-label">Calculated Total</div>
-            <div class="ea-kpi-value">{format_inr(float(res))}</div>
-            <div class="ea-kpi-sub">Computed directly from verified expense records</div>
-        </div>
-        """
-    if fn == "get_highest_category" and isinstance(res, dict):
-        cat = html.escape(str(res.get("category") or "N/A"))
-        amt = format_inr(float(res.get("amount", 0.0)))
-        return f"""
-        <div class="ea-card">
-            <div class="ea-kpi-label">Highest Spending Category</div>
-            <div class="ea-kpi-value">{cat}</div>
-            <div class="ea-kpi-sub">Total spend: {amt}</div>
-        </div>
-        """
-    if fn == "categorize_expense" and isinstance(res, dict):
-        cat = html.escape(str(res.get("category", "")))
-        desc = html.escape(str(res.get("description", "")))
-        conf = float(res.get("confidence", 0.0))
-        return f"""
-        <div class="ea-card">
-            <div class="ea-kpi-label">ML Classification Result</div>
-            <div class="ea-kpi-value">{cat}</div>
-            <div class="ea-kpi-sub">Description: “{desc}” · Confidence: {conf:.1%}</div>
-        </div>
-        """
-    if fn == "compare_months" and isinstance(res, dict):
-        diff = float(res.get("difference", 0.0))
-        pct = float(res.get("percent_change", 0.0))
-        sign = "+" if diff >= 0 else "-"
-        return f"""
-        <div class="ea-card">
-            <div class="ea-kpi-label">Monthly Delta</div>
-            <div class="ea-kpi-value">{sign}{format_inr(abs(diff))}</div>
-            <div class="ea-kpi-sub">{pct:+.1f}% change between Month {res['month_a']} and Month {res['month_b']}</div>
-        </div>
-        """
-    return DEFAULT_INSPECTOR_HTML
-
-
-def _format_chat_outcome(
-    user_label: str,
-    tool_output: dict[str, Any],
-    chat_history: list[dict[str, str]],
-) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
-    """Update chat history, progressive disclosure table/chart, and inspector card."""
-    empty_df = pd.DataFrame(columns=["expense_id", "description", "amount", "date", "category"])
-    answer = str(tool_output.get("answer") or generate_response(tool_output))
-    chat_history.append({"role": "user", "content": user_label})
-    chat_history.append({"role": "assistant", "content": answer})
-
-    if not tool_output.get("ok"):
-        feedback = f"<div class='ea-feedback error'>{html.escape(answer)}</div>"
-        return (
-            "",
-            chat_history,
-            gr.update(visible=False, value=empty_df),
-            gr.update(visible=False, value=None),
-            feedback,
-            user_label,
-            DEFAULT_INSPECTOR_HTML,
+    r2_a, r2_b = st.columns(2)
+    r2_a.plotly_chart(top_categories_chart(df), use_container_width=True, key="dash_bar")
+    with r2_b:
+        m_a_col, m_b_col = st.columns(2)
+        month_choices = list(MONTH_NAMES.keys())
+        month_a = m_a_col.selectbox(
+            "Month A", month_choices, index=9, format_func=lambda m: MONTH_NAMES[m]
+        )
+        month_b = m_b_col.selectbox(
+            "Month B", month_choices, index=10, format_func=lambda m: MONTH_NAMES[m]
+        )
+        st.plotly_chart(
+            monthly_comparison_chart(df, int(month_a), int(month_b)),
+            use_container_width=True,
+            key="dash_compare",
         )
 
-    fn = str(tool_output.get("function"))
-    res = tool_output.get("result")
-    feedback = f"<div class='ea-feedback'>Completed <b>{html.escape(fn)}</b>.</div>"
-    inspector_html = _build_inspector_card(fn, res)
+    st.subheader("Expense Ledger")
+    f1, f2, f3 = st.columns([2, 1, 1])
+    search_text = f1.text_input("Search description", placeholder="e.g., Swiggy, Uber, electricity")
+    selected_cat = f2.selectbox("Category", ["All", *ALLOWED_CATEGORIES])
+    sort_by = f3.selectbox("Sort by", ["Date (Newest)", "Date (Oldest)", "Amount (High to Low)", "Amount (Low to High)"])
 
-    table_update: Any = gr.update(visible=False, value=empty_df)
-    chart_update: Any = gr.update(visible=False, value=None)
+    filtered = df.copy()
+    if selected_cat != "All":
+        filtered = filtered[filtered["category"] == selected_cat]
+    if search_text.strip():
+        filtered = filtered[filtered["description"].str.contains(search_text.strip(), case=False, na=False)]
 
-    if fn == "get_expenses" and isinstance(res, list) and res:
-        table_update = gr.update(visible=True, value=pd.DataFrame(res))
-        inspector_html = (
-            f"<div class='ea-card'><div class='ea-kpi-label'>Matching Records</div>"
-            f"<div class='ea-kpi-value'>{len(res)} entries</div>"
-            f"<div class='ea-kpi-sub'>Sorted newest first</div></div>"
-        )
-    elif fn == "get_category_breakdown" and isinstance(res, dict):
-        chart_update = gr.update(visible=True, value=breakdown_dict_chart(res, "Category Breakdown"))
-    elif fn == "compare_months" and isinstance(res, dict):
-        chart_update = gr.update(
-            visible=True,
-            value=monthly_comparison_chart(_load_df(), int(res["month_a"]), int(res["month_b"])),
-        )
+    if sort_by == "Date (Newest)":
+        filtered = filtered.sort_values("date", ascending=False)
+    elif sort_by == "Date (Oldest)":
+        filtered = filtered.sort_values("date", ascending=True)
+    elif sort_by == "Amount (High to Low)":
+        filtered = filtered.sort_values("amount", ascending=False)
+    else:
+        filtered = filtered.sort_values("amount", ascending=True)
 
-    return "", chat_history, table_update, chart_update, feedback, user_label, inspector_html
-
-
-def handle_chat_query(
-    user_message: str,
-    history: list[dict[str, str]] | None,
-) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
-    """Send user query strictly to Python backend (process_query) and render results."""
-    chat_history = list(history or [])
-    empty_df = pd.DataFrame(columns=["expense_id", "description", "amount", "date", "category"])
-
-    if not isinstance(user_message, str) or not user_message.strip():
-        feedback = "<div class='ea-feedback error'>Please enter a question or expense description.</div>"
-        return (
-            "",
-            chat_history,
-            gr.update(visible=False, value=empty_df),
-            gr.update(visible=False, value=None),
-            feedback,
-            "",
-            DEFAULT_INSPECTOR_HTML,
-        )
-
-    query = user_message.strip()
-    tool_output = process_query(query)
-    return _format_chat_outcome(query, tool_output, chat_history)
-
-
-def handle_qwen_json_test(
-    raw_json: str,
-    history: list[dict[str, str]] | None,
-) -> tuple[str, list[dict[str, str]], Any, Any, str, str, str]:
-    """Execute a raw Qwen2.5 JSON payload directly through the Python backend."""
-    chat_history = list(history or [])
-    tool_output = process_query("", llm_json=raw_json)
-    _, updated_hist, tbl, chrt, fb, _, insp = _format_chat_outcome(
-        f"Qwen JSON: {raw_json.strip()}", tool_output, chat_history
+    disp = filtered.head(150).copy()
+    disp["Date"] = disp["date"].apply(_format_indian_date)
+    disp["Amount"] = disp["amount"].apply(lambda x: format_inr(float(x)))
+    st.dataframe(
+        disp[["expense_id", "Date", "description", "category", "Amount"]].rename(
+            columns={"expense_id": "ID", "description": "Description", "category": "Category"}
+        ),
+        use_container_width=True,
+        hide_index=True,
     )
-    return raw_json, updated_hist, tbl, chrt, fb, "", insp
+
+    csv_bytes = filtered[["expense_id", "description", "amount", "date", "category"]].to_csv(index=False).encode("utf-8")
+    st.download_button(
+        "Export Filtered CSV",
+        data=csv_bytes,
+        file_name="smart_expense_filtered.csv",
+        mime="text/csv",
+    )
 
 
-def filter_ledger(category: str, search_text: str) -> pd.DataFrame:
-    """Filter expense ledger by category and description substring."""
-    cat_arg = None if category == "All" else category
-    df = pd.DataFrame(get_expenses(category=cat_arg))
-    if df.empty:
-        return df
-    if search_text and search_text.strip():
-        df = df[df["description"].str.contains(search_text.strip(), case=False, na=False)]
-    return df.head(150)
+def _render_add_expense_tab() -> None:
+    st.caption("Validated entries are written to `data/runtime/expenses.csv` while `data/expenses.csv` remains read-only.")
+    c1, c2 = st.columns(2)
+    desc = c1.text_input("Description", placeholder="e.g., Uber ride to office")
+    amt = c2.number_input("Amount (₹)", min_value=1.0, value=250.0, step=10.0)
+
+    c3, c4 = st.columns(2)
+    exp_date = c3.text_input("Date (YYYY-MM-DD)", value=date.today().isoformat())
+    cat_choice = c4.selectbox("Category", ["Auto (ML Classifier)", *ALLOWED_CATEGORIES])
+
+    # Live ML category preview micro-interaction
+    if cat_choice == "Auto (ML Classifier)":
+        if len(desc.strip()) >= 3:
+            try:
+                pred = predict(desc.strip())
+                st.markdown(
+                    f"<div class='ea-preview-pill'>ML Preview: <b>{html.escape(pred['category'])}</b> "
+                    f"({pred['confidence']:.1%} confidence)</div>",
+                    unsafe_allow_html=True,
+                )
+            except (ValueError, TypeError):
+                pass
+        else:
+            st.markdown(
+                "<div class='ea-preview-pill'>Type at least 3 characters for live ML category preview.</div>",
+                unsafe_allow_html=True,
+            )
+
+    if st.button("Add Expense", type="primary"):
+        cat_arg = None if cat_choice == "Auto (ML Classifier)" else cat_choice
+        out = execute_tool_call({
+            "function": "add_expense",
+            "arguments": {
+                "description": desc,
+                "amount": amt,
+                "expense_date": exp_date,
+                "category": cat_arg,
+            },
+        })
+        if out.get("ok"):
+            row = out["result"]
+            st.success(
+                f"Added {row['expense_id']}: {row['description']} — "
+                f"{format_inr(float(row['amount']))} ({row['category']}, {row['date']})"
+            )
+        else:
+            st.error(out.get("error", "Could not add expense."))
 
 
-def export_filtered_csv(category: str, search_text: str) -> str:
-    """Export filtered ledger rows to a temporary CSV for download."""
-    df = filter_ledger(category, search_text)
-    tmp_path = Path(tempfile.gettempdir()) / "smart_expense_filtered.csv"
-    df.to_csv(tmp_path, index=False)
-    return str(tmp_path)
+def main() -> None:
+    """Configure page layout and render the Streamlit Smart Expense Assistant."""
+    st.set_page_config(
+        page_title="Smart Expense Assistant",
+        page_icon="₹",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
+    st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
+    _init_session_state()
 
-
-def preview_ml_category(description: str, selected_category: str) -> str:
-    """Provide instant ML category preview while typing an expense description."""
-    if selected_category != "Auto (ML Classifier)":
-        return f"<div class='ea-preview-pill'>Manual Category: <b>{html.escape(selected_category)}</b></div>"
-    if not isinstance(description, str) or len(description.strip()) < 3:
-        return "<div class='ea-preview-pill'>Type at least 3 characters for live ML category preview.</div>"
-    try:
-        res = predict(description.strip())
-        return (
-            f"<div class='ea-preview-pill'>ML Preview: <b>{html.escape(res['category'])}</b> "
-            f"({res['confidence']:.1%} confidence)</div>"
-        )
-    except (ValueError, TypeError):
-        return "<div class='ea-preview-pill'>ML Preview unavailable for this input.</div>"
-
-
-def handle_add_expense(
-    description: str,
-    amount: float,
-    expense_date: str,
-    category: str,
-) -> tuple[str, str, Any, Any, Any, Any, pd.DataFrame]:
-    """Validate and add an expense via backend router, then refresh dashboard."""
-    cat_arg = None if category == "Auto (ML Classifier)" else category
-    tool_output = execute_tool_call({
-        "function": "add_expense",
-        "arguments": {
-            "description": description,
-            "amount": amount,
-            "expense_date": expense_date,
-            "category": cat_arg,
-        },
-    })
-    msg = generate_response(tool_output)
-    css_cls = "ea-feedback" if tool_output.get("ok") else "ea-feedback error"
-    status_html = f"<div class='{css_cls}'>{html.escape(msg)}</div>"
     df = _load_df()
-    return (
-        status_html,
-        _build_kpi_html(df),
-        category_distribution_chart(df),
-        monthly_trend_chart(df),
-        top_categories_chart(df),
-        monthly_comparison_chart(df, 10, 11),
-        df.head(150),
-    )
-
-
-def create_app() -> gr.Blocks:
-    """Build and return the Gradio Blocks application."""
-    df_init = _load_df()
-
-    with gr.Blocks(title="Smart Expense Assistant") as demo:
-        last_query_state = gr.State("")
-
-        gr.HTML(
-            f"""
-            <div class="ea-topbar">
-                <div>
-                    <h1 class="ea-title">Smart Expense Assistant</h1>
-                    <p class="ea-subtitle">Conversational expense intelligence, ML categorization & INR (₹) analytics</p>
-                </div>
-                <div class="ea-status-pill">
-                    <span class="ea-dot"></span>
-                    <span>{len(df_init):,} Expenses · ML Classifier Ready</span>
-                </div>
+    st.markdown(
+        f"""
+        <div class="ea-topbar">
+            <div>
+                <h1 class="ea-title">Smart Expense Assistant</h1>
+                <p class="ea-subtitle">Conversational expense intelligence, ML categorization & INR (₹) analytics</p>
             </div>
-            """
-        )
-
-        with gr.Tabs():
-            with gr.Tab("Assistant"):
-                with gr.Row():
-                    with gr.Column(scale=3):
-                        chatbot = gr.Chatbot(
-                            label="Conversation",
-                            height=440,
-                            placeholder="Ask a question about your expenses or pick a quick prompt below.",
-                        )
-                        feedback_html = gr.HTML("")
-                        with gr.Row():
-                            query_box = gr.Textbox(
-                                placeholder="Ask anything (e.g. 'How much did I spend on food in November?')",
-                                show_label=False,
-                                scale=6,
-                            )
-                            send_btn = gr.Button("Send", variant="primary", scale=1)
-                            retry_btn = gr.Button("Retry", scale=1)
-                            clear_btn = gr.Button("Clear", scale=1)
-
-                        gr.Markdown("**Quick Prompts**")
-                        sample_btns: list[tuple[str, gr.Button]] = []
-                        with gr.Row():
-                            for label, full_q in SAMPLE_QUERIES[:3]:
-                                sample_btns.append((full_q, gr.Button(label, size="sm")))
-                        with gr.Row():
-                            for label, full_q in SAMPLE_QUERIES[3:]:
-                                sample_btns.append((full_q, gr.Button(label, size="sm")))
-
-                        with gr.Accordion("Integration Tester: Run Raw Qwen2.5 JSON", open=False):
-                            qwen_json_box = gr.Textbox(
-                                label="Qwen JSON Output",
-                                lines=6,
-                                value='{\n    "intent": "calculate_spending",\n    "category": "Food",\n    "month": "November",\n    "amount": null,\n    "description": null\n}',
-                            )
-                            qwen_run_btn = gr.Button("Run Qwen JSON via Backend", size="sm")
-
-                    with gr.Column(scale=2):
-                        inspector_html = gr.HTML(DEFAULT_INSPECTOR_HTML)
-                        chat_chart = gr.Plot(label="Visual Breakdown", visible=False)
-                        chat_table = gr.Dataframe(
-                            label="Matching Transactions",
-                            interactive=False,
-                            wrap=True,
-                            visible=False,
-                        )
-
-                outputs_chat = [
-                    query_box,
-                    chatbot,
-                    chat_table,
-                    chat_chart,
-                    feedback_html,
-                    last_query_state,
-                    inspector_html,
-                ]
-                send_btn.click(
-                    fn=handle_chat_query,
-                    inputs=[query_box, chatbot],
-                    outputs=outputs_chat,
-                    show_progress="minimal",
-                )
-                query_box.submit(
-                    fn=handle_chat_query,
-                    inputs=[query_box, chatbot],
-                    outputs=outputs_chat,
-                    show_progress="minimal",
-                )
-                retry_btn.click(
-                    fn=handle_chat_query,
-                    inputs=[last_query_state, chatbot],
-                    outputs=outputs_chat,
-                    show_progress="minimal",
-                )
-                clear_btn.click(
-                    fn=lambda: (
-                        [],
-                        gr.update(visible=False, value=pd.DataFrame()),
-                        gr.update(visible=False, value=None),
-                        "",
-                        "",
-                        DEFAULT_INSPECTOR_HTML,
-                    ),
-                    outputs=[chatbot, chat_table, chat_chart, feedback_html, last_query_state, inspector_html],
-                    show_progress="hidden",
-                )
-                for q_text, q_btn in sample_btns:
-                    q_btn.click(
-                        fn=lambda h, text=q_text: handle_chat_query(text, h),
-                        inputs=[chatbot],
-                        outputs=outputs_chat,
-                        show_progress="minimal",
-                    )
-                qwen_run_btn.click(
-                    fn=handle_qwen_json_test,
-                    inputs=[qwen_json_box, chatbot],
-                    outputs=[qwen_json_box, chatbot, chat_table, chat_chart, feedback_html, last_query_state, inspector_html],
-                    show_progress="minimal",
-                )
-
-            with gr.Tab("Analytics Dashboard"):
-                kpi_html = gr.HTML(_build_kpi_html(df_init))
-                with gr.Row():
-                    plot_donut = gr.Plot(category_distribution_chart(df_init))
-                    plot_trend = gr.Plot(monthly_trend_chart(df_init))
-                with gr.Row():
-                    plot_bar = gr.Plot(top_categories_chart(df_init))
-                    with gr.Column():
-                        with gr.Row():
-                            month_a_dd = gr.Dropdown(
-                                choices=[(v, k) for k, v in MONTH_NAMES.items()],
-                                value=10,
-                                label="Month A",
-                            )
-                            month_b_dd = gr.Dropdown(
-                                choices=[(v, k) for k, v in MONTH_NAMES.items()],
-                                value=11,
-                                label="Month B",
-                            )
-                        plot_comp = gr.Plot(monthly_comparison_chart(df_init, 10, 11))
-
-                month_a_dd.change(
-                    fn=lambda a, b: monthly_comparison_chart(_load_df(), int(a), int(b)),
-                    inputs=[month_a_dd, month_b_dd],
-                    outputs=[plot_comp],
-                    show_progress="minimal",
-                )
-                month_b_dd.change(
-                    fn=lambda a, b: monthly_comparison_chart(_load_df(), int(a), int(b)),
-                    inputs=[month_a_dd, month_b_dd],
-                    outputs=[plot_comp],
-                    show_progress="minimal",
-                )
-
-                gr.Markdown("### Expense Ledger")
-                with gr.Row():
-                    cat_filter = gr.Dropdown(
-                        choices=["All", *ALLOWED_CATEGORIES],
-                        value="All",
-                        label="Category",
-                        scale=2,
-                    )
-                    search_filter = gr.Textbox(
-                        placeholder="Search description (e.g. Swiggy, Uber, electricity)...",
-                        label="Search",
-                        scale=4,
-                    )
-                    export_btn = gr.DownloadButton("Export CSV", scale=1)
-
-                ledger_table = gr.Dataframe(value=df_init.head(150), interactive=False, wrap=True)
-                cat_filter.change(
-                    fn=filter_ledger,
-                    inputs=[cat_filter, search_filter],
-                    outputs=[ledger_table],
-                    show_progress="hidden",
-                )
-                search_filter.change(
-                    fn=filter_ledger,
-                    inputs=[cat_filter, search_filter],
-                    outputs=[ledger_table],
-                    show_progress="hidden",
-                )
-                export_btn.click(
-                    fn=export_filtered_csv,
-                    inputs=[cat_filter, search_filter],
-                    outputs=[export_btn],
-                )
-
-            with gr.Tab("Add Expense"):
-                gr.Markdown("Record a new expense into `data/runtime/expenses.csv` (seed data remains read-only).")
-                with gr.Row():
-                    add_desc = gr.Textbox(label="Description", placeholder="e.g. Uber ride to office")
-                    add_amt = gr.Number(label="Amount (₹)", value=250.0, minimum=1.0)
-                with gr.Row():
-                    add_date = gr.Textbox(label="Date (YYYY-MM-DD)", value=date.today().isoformat())
-                    add_cat = gr.Dropdown(
-                        choices=["Auto (ML Classifier)", *ALLOWED_CATEGORIES],
-                        value="Auto (ML Classifier)",
-                        label="Category",
-                    )
-                preview_html = gr.HTML(preview_ml_category("", "Auto (ML Classifier)"))
-                with gr.Row():
-                    add_btn = gr.Button("Add Expense", variant="primary")
-                    reset_btn = gr.Button("Reset Form")
-                add_status = gr.HTML()
-
-                add_desc.change(
-                    fn=preview_ml_category,
-                    inputs=[add_desc, add_cat],
-                    outputs=[preview_html],
-                    show_progress="hidden",
-                )
-                add_cat.change(
-                    fn=preview_ml_category,
-                    inputs=[add_desc, add_cat],
-                    outputs=[preview_html],
-                    show_progress="hidden",
-                )
-                add_btn.click(
-                    fn=handle_add_expense,
-                    inputs=[add_desc, add_amt, add_date, add_cat],
-                    outputs=[
-                        add_status,
-                        kpi_html,
-                        plot_donut,
-                        plot_trend,
-                        plot_bar,
-                        plot_comp,
-                        ledger_table,
-                    ],
-                    show_progress="minimal",
-                )
-                reset_btn.click(
-                    fn=lambda: (
-                        "",
-                        250.0,
-                        date.today().isoformat(),
-                        "Auto (ML Classifier)",
-                        "",
-                        preview_ml_category("", "Auto (ML Classifier)"),
-                    ),
-                    outputs=[add_desc, add_amt, add_date, add_cat, add_status, preview_html],
-                    show_progress="hidden",
-                )
-
-    return demo
-
-
-def launch_app(share: bool = False) -> None:
-    """Launch the Gradio application (set share=True in Google Colab)."""
-    theme = gr.themes.Base(
-        primary_hue=gr.themes.colors.blue,
-        neutral_hue=gr.themes.colors.gray,
+            <div class="ea-status-pill">
+                <span class="ea-dot"></span>
+                <span>{len(df):,} Expenses · ML Classifier Ready</span>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
-    app = create_app()
-    app.launch(share=share, theme=theme, css=CUSTOM_CSS)
+
+    _render_sidebar()
+
+    tab_chat, tab_analytics, tab_add = st.tabs(["Assistant", "Analytics Dashboard", "Add Expense"])
+    with tab_chat:
+        _render_assistant_tab(df)
+    with tab_analytics:
+        _render_dashboard_tab(df)
+    with tab_add:
+        _render_add_expense_tab()
 
 
 if __name__ == "__main__":
-    launch_app(share=False)
+    main()

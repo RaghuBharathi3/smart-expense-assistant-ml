@@ -27,12 +27,16 @@ All tools read from `data/runtime/expenses.csv` (initialized from read-only `dat
 }
 ```
 
-### Connecting Qwen in Google Colab
+### Connecting Qwen in Google Colab / Streamlit
 
 ```python
 from src.backend.router import register_llm_handler
-from src.interface.app import launch_app
 
 register_llm_handler(your_qwen_json_function)  # takes user_query: str -> JSON dict or str
-launch_app(share=True)
+```
+
+Run the Streamlit UI locally:
+
+```bash
+streamlit run src/interface/app.py
 ```

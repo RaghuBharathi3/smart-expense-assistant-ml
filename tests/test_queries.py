@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import pandas as pd
 import pytest
 
@@ -90,16 +88,10 @@ def test_registered_qwen_handler_and_fallback() -> None:
 
 
 def test_interface_app_renders() -> None:
-    """Verify Gradio Blocks app, chat handler, Qwen JSON tester, ML preview, export, and charts."""
+    """Verify Streamlit app renders cleanly and Plotly charts build without errors."""
+    from streamlit.testing.v1 import AppTest
+
     from src.backend.tools import get_expenses
-    from src.interface.app import (
-        create_app,
-        export_filtered_csv,
-        filter_ledger,
-        handle_chat_query,
-        handle_qwen_json_test,
-        preview_ml_category,
-    )
     from src.interface.charts import (
         category_distribution_chart,
         monthly_comparison_chart,
@@ -107,40 +99,9 @@ def test_interface_app_renders() -> None:
         top_categories_chart,
     )
 
-    app = create_app()
-    assert app is not None
-
-    _, hist, table_upd, _, feedback, _, inspector = handle_chat_query("Show all my expenses in November.", [])
-    assert len(hist) == 2
-    assert table_upd["visible"] is True
-    assert not table_upd["value"].empty
-    assert "Completed" in feedback
-    assert "Matching Records" in inspector
-
-    _, hist2, _, chart_upd, _, _, delta_card = handle_chat_query("Compare my expenses between October and November.", [])
-    assert len(hist2) == 2
-    assert chart_upd["visible"] is True
-    assert "Monthly Delta" in delta_card
-
-    _, _, _, _, err_feedback, _, _ = handle_chat_query("   ", [])
-    assert "error" in err_feedback
-
-    _, qwen_hist, _, _, qwen_fb, _, qwen_insp = handle_qwen_json_test(
-        '{"intent": "calculate_spending", "category": "Food", "month": "November", "amount": null, "description": null}',
-        [],
-    )
-    assert len(qwen_hist) == 2
-    assert "Completed" in qwen_fb
-    assert "Calculated Total" in qwen_insp
-
-    preview = preview_ml_category("Uber ride to office", "Auto (ML Classifier)")
-    assert "Travel" in preview
-
-    filtered = filter_ledger("Food", "")
-    assert not filtered.empty
-
-    csv_path = Path(export_filtered_csv("Food", ""))
-    assert csv_path.exists()
+    at = AppTest.from_file("src/interface/app.py", default_timeout=20)
+    at.run()
+    assert not at.exception
 
     df = pd.DataFrame(get_expenses())
     assert category_distribution_chart(df) is not None
