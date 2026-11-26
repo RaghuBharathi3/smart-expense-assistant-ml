@@ -10,7 +10,7 @@ import streamlit as st
 
 from frontend.contracts import AssistantResponse, ResponseType, VisualizationSpec
 from frontend.services.assistant_service import AssistantService
-from frontend.theme import PALETTE, format_indian_date, format_inr
+from frontend.theme import PALETTE, format_indian_date, format_inr, style_plotly_figure
 
 SUGGESTED_QUERIES = [
     "How much did I spend on food in November?",
@@ -47,7 +47,7 @@ def _render_visualization(viz: VisualizationSpec, key_prefix: str) -> None:
             color_discrete_sequence=PALETTE["chart_colors"],
         )
         fig.update_traces(textinfo="label+percent", hovertemplate="%{label}: ₹%{value:,.2f}<extra></extra>")
-        fig.update_layout(margin=dict(t=40, b=10, l=10, r=10), height=320)
+        style_plotly_figure(fig, height=300)
         st.plotly_chart(fig, use_container_width=True, key=f"{key_prefix}_donut")
     elif viz.chart_type == "comparison" and isinstance(viz.data, list) and viz.data:
         df_plot = pd.DataFrame(viz.data)
@@ -64,7 +64,7 @@ def _render_visualization(viz: VisualizationSpec, key_prefix: str) -> None:
         )
         fig.update_yaxes(title_text=viz.y_label)
         fig.update_xaxes(title_text="Category")
-        fig.update_layout(margin=dict(t=40, b=10, l=10, r=10), height=320)
+        style_plotly_figure(fig, height=300)
         st.plotly_chart(fig, use_container_width=True, key=f"{key_prefix}_comp")
 
 

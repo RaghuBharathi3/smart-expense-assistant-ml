@@ -9,7 +9,7 @@ import plotly.express as px
 import streamlit as st
 
 from frontend.services.assistant_service import compute_dashboard_metrics
-from frontend.theme import PALETTE, format_indian_date, format_inr
+from frontend.theme import PALETTE, format_indian_date, format_inr, style_plotly_figure
 
 
 def _render_kpi_card(col: Any, label: str, value: str, subtitle: str) -> None:
@@ -27,7 +27,7 @@ def _render_kpi_card(col: Any, label: str, value: str, subtitle: str) -> None:
 
 def render_dashboard_panel(df: pd.DataFrame) -> None:
     """Render summary KPI cards, interactive charts, and searchable expense table."""
-    st.subheader("Financial Overview & Analytics")
+    st.markdown('<div class="section-title">Overview</div>', unsafe_allow_html=True)
 
     if df.empty:
         st.warning("No expense records available. Ensure data/expenses.csv exists or connect Task 2.")
@@ -81,7 +81,7 @@ def render_dashboard_panel(df: pd.DataFrame) -> None:
             color_discrete_sequence=PALETTE["chart_colors"],
         )
         fig_donut.update_traces(textinfo="label+percent", hovertemplate="%{label}: ₹%{value:,.2f}<extra></extra>")
-        fig_donut.update_layout(margin=dict(t=45, b=10, l=10, r=10), height=340)
+        style_plotly_figure(fig_donut, height=320)
         st.plotly_chart(fig_donut, use_container_width=True, key="dash_donut")
 
     with col_right:
@@ -91,12 +91,12 @@ def render_dashboard_panel(df: pd.DataFrame) -> None:
             y="amount",
             markers=True,
             title="Monthly Expense Trend",
-            color_discrete_sequence=[PALETTE["secondary"]],
+            color_discrete_sequence=[PALETTE["primary"]],
         )
         fig_line.update_xaxes(title_text="Month")
         fig_line.update_yaxes(title_text="Amount (₹)")
         fig_line.update_traces(hovertemplate="%{x}: ₹%{y:,.2f}<extra></extra>")
-        fig_line.update_layout(margin=dict(t=45, b=10, l=10, r=10), height=340)
+        style_plotly_figure(fig_line, height=320)
         st.plotly_chart(fig_line, use_container_width=True, key="dash_line")
 
     col_bar, col_comp = st.columns(2)
@@ -111,7 +111,8 @@ def render_dashboard_panel(df: pd.DataFrame) -> None:
         )
         fig_bar.update_xaxes(title_text="Category")
         fig_bar.update_yaxes(title_text="Amount (₹)")
-        fig_bar.update_layout(showlegend=False, margin=dict(t=45, b=10, l=10, r=10), height=340)
+        fig_bar.update_layout(showlegend=False)
+        style_plotly_figure(fig_bar, height=320)
         st.plotly_chart(fig_bar, use_container_width=True, key="dash_bar")
 
     with col_comp:
@@ -128,11 +129,11 @@ def render_dashboard_panel(df: pd.DataFrame) -> None:
                 color="Month",
                 barmode="group",
                 title="Monthly Comparison: October vs November 2025",
-                color_discrete_sequence=[PALETTE["secondary"], PALETTE["accent"]],
+                color_discrete_sequence=[PALETTE["primary"], PALETTE["secondary"]],
             )
             fig_comp.update_xaxes(title_text="Category")
             fig_comp.update_yaxes(title_text="Amount (₹)")
-            fig_comp.update_layout(margin=dict(t=45, b=10, l=10, r=10), height=340)
+            style_plotly_figure(fig_comp, height=320)
             st.plotly_chart(fig_comp, use_container_width=True, key="dash_oct_nov")
         else:
             st.info("No October/November 2025 records found for comparison.")

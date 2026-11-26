@@ -21,13 +21,20 @@ def main() -> None:
     )
     st.markdown(get_custom_css(), unsafe_allow_html=True)
 
-    st.title("Smart Expense Assistant")
-    st.caption("Conversational expense tracking, ML categorization, and financial analytics (INR ₹)")
+    st.markdown(
+        """
+        <div class="app-header">
+            <h1>Smart Expense Assistant</h1>
+            <p>Expense categorization, retrieval analytics, and reporting in Indian Rupees (₹)</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     service = AssistantService()
     df = load_expense_dataframe()
 
-    tab_chat, tab_dashboard = st.tabs(["Chatbot Assistant", "Financial Dashboard"])
+    tab_chat, tab_dashboard = st.tabs(["Assistant", "Analytics Dashboard"])
     with tab_chat:
         render_chatbot_panel(service)
     with tab_dashboard:
