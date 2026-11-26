@@ -1,4 +1,4 @@
-"""Apple-HIG inspired, minimal interactive Plotly charts for Smart Expense Assistant."""
+"""Clean, warm-paper Plotly charts integrated naturally into conversations."""
 
 from __future__ import annotations
 
@@ -6,7 +6,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-CHART_COLORS = ["#0066CC", "#0F766E", "#6E6E73", "#B45309"]
+# Restrained warm editorial palette (Terracotta, Forest Sage, Slate, Ochre)
+CHART_COLORS = ["#C2593F", "#2D6A4F", "#5C677D", "#B07D3C"]
 
 MONTH_NAMES = {
     1: "January", 2: "February", 3: "March", 4: "April",
@@ -24,54 +25,54 @@ def _empty_figure(title: str, message: str = "No matching expense records found.
         x=0.5,
         y=0.5,
         showarrow=False,
-        font=dict(size=13, color="#6E6E73"),
+        font=dict(size=13, color="#6B6860"),
     )
     fig.update_layout(
         title=title,
-        height=320,
+        height=300,
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         xaxis=dict(visible=False),
         yaxis=dict(visible=False),
-        margin=dict(t=48, b=20, l=18, r=18),
+        margin=dict(t=46, b=18, l=16, r=16),
     )
     return fig
 
 
-def _style_chart(fig: go.Figure, title: str, height: int = 330) -> go.Figure:
+def _style_chart(fig: go.Figure, title: str, height: int = 310) -> go.Figure:
     fig.update_layout(
-        title=dict(text=title, font=dict(size=14, color="#1D1D1F"), x=0.02, xanchor="left"),
+        title=dict(text=title, font=dict(size=13.5, color="#1A1917"), x=0.01, xanchor="left"),
         height=height,
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         font=dict(
-            family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif",
+            family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif",
             size=12,
-            color="#6E6E73",
+            color="#5C5952",
         ),
-        margin=dict(t=50, b=24, l=16, r=16),
+        margin=dict(t=46, b=22, l=14, r=14),
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.22,
+            y=-0.24,
             xanchor="left",
             x=0,
-            font=dict(size=11, color="#6E6E73"),
+            font=dict(size=11, color="#5C5952"),
         ),
         hoverlabel=dict(
-            bgcolor="#1D1D1F",
-            bordercolor="#1D1D1F",
+            bgcolor="#1A1917",
+            bordercolor="#1A1917",
             font_size=12,
-            font_color="#FFFFFF",
+            font_color="#FAF9F6",
         ),
     )
-    fig.update_yaxes(gridcolor="#F2F2F7", zerolinecolor="#E5E5EA", title_text="Amount (₹)")
-    fig.update_xaxes(showgrid=False, linecolor="#E5E5EA")
+    fig.update_yaxes(gridcolor="#F1EFEA", zerolinecolor="#E6E4DD", title_text="Amount (₹)")
+    fig.update_xaxes(showgrid=False, linecolor="#E6E4DD")
     return fig
 
 
 def category_distribution_chart(df: pd.DataFrame) -> go.Figure:
-    """Build category-wise spending donut chart with center total annotation."""
+    """Build category-wise spending donut chart with center total."""
     if df.empty:
         return _empty_figure("Category Distribution")
     grouped = df.groupby("category", as_index=False)["amount"].sum().sort_values("amount", ascending=False)
@@ -90,13 +91,13 @@ def category_distribution_chart(df: pd.DataFrame) -> go.Figure:
         marker=dict(line=dict(color="#FFFFFF", width=2)),
     )
     fig.add_annotation(
-        text=f"<b>₹{total:,.0f}</b><br><span style='font-size:11px;color:#6E6E73'>Total</span>",
+        text=f"<b>₹{total:,.0f}</b><br><span style='font-size:11px;color:#6B6860'>Total</span>",
         x=0.5,
         y=0.5,
         showarrow=False,
-        font=dict(size=14, color="#1D1D1F"),
+        font=dict(size=14, color="#1A1917"),
     )
-    return _style_chart(fig, "Category-Wise Spending Distribution")
+    return _style_chart(fig, "Spending by Category")
 
 
 def monthly_comparison_chart(df: pd.DataFrame, month_a: int = 10, month_b: int = 11) -> go.Figure:
@@ -125,7 +126,7 @@ def monthly_comparison_chart(df: pd.DataFrame, month_a: int = 10, month_b: int =
 
 
 def monthly_trend_chart(df: pd.DataFrame) -> go.Figure:
-    """Build total monthly spend smooth trend line chart."""
+    """Build total monthly spend trend line chart."""
     if df.empty:
         return _empty_figure("Monthly Spend Trend")
     temp = df.copy()
@@ -140,7 +141,7 @@ def monthly_trend_chart(df: pd.DataFrame) -> go.Figure:
         color_discrete_sequence=[CHART_COLORS[0]],
     )
     fig.update_traces(
-        line=dict(width=2.5),
+        line=dict(width=2.2),
         marker=dict(size=6),
         hovertemplate="<b>%{x}</b><br>₹%{y:,.2f}<extra></extra>",
     )
@@ -171,4 +172,4 @@ def breakdown_dict_chart(breakdown: dict[str, float], title: str = "Category Bre
         hovertemplate="<b>%{label}</b><br>₹%{value:,.2f}<extra></extra>",
         marker=dict(line=dict(color="#FFFFFF", width=2)),
     )
-    return _style_chart(fig, title, height=300)
+    return _style_chart(fig, title, height=290)

@@ -103,6 +103,14 @@ def test_interface_app_renders() -> None:
     at.run()
     assert not at.exception
 
+    # Verify clicking a welcome prompt executes and populates conversation
+    if at.button:
+        welcome_btns = [b for b in at.button if b.key and b.key.startswith("welcome_prompt_")]
+        assert len(welcome_btns) == 6
+        welcome_btns[0].click().run()
+        assert not at.exception
+        assert len(at.chat_message) >= 2
+
     df = pd.DataFrame(get_expenses())
     assert category_distribution_chart(df) is not None
     assert monthly_comparison_chart(df, 10, 11) is not None
