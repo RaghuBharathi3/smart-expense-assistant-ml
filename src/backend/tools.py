@@ -81,7 +81,7 @@ def calculate_spending(
 def compare_months(
     month_a: int,
     month_b: int,
-    year: int | None = 2025,
+    year: int | None = None,
 ) -> dict[str, Any]:
     """Compare total and per-category spending between two months."""
     validate_month_year(month_a, year)

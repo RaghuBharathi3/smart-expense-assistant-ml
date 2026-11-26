@@ -8,6 +8,8 @@ import pandas as pd
 import pytest
 
 from src.backend import tools, validators
+from src.classifier.preprocessing import clean_text, load_and_clean_dataset, split_dataset
+from src.config import SEED_DATA_PATH
 
 
 @pytest.fixture()
@@ -85,3 +87,17 @@ def test_validator_duplicate_id() -> None:
     df = pd.DataFrame([{"expense_id": "EXP-0001"}])
     with pytest.raises(ValueError, match="Duplicate"):
         validators.validate_expense_id("EXP-0001", df)
+
+
+def test_preprocessing_clean_and_split() -> None:
+    """Verify text normalization, dataset cleaning, and 80:20 stratified split."""
+    assert clean_text("  Uber   Ride!! to Office  ") == "uber ride to office"
+    df = load_and_clean_dataset(SEED_DATA_PATH)
+    assert len(df) == 1200
+    assert df["clean_description"].isnull().sum() == 0
+
+    X_train, X_test, y_train, y_test = split_dataset(df)
+    assert len(X_train) == 960
+    assert len(X_test) == 240
+    assert set(y_train.unique()) == set(y_test.unique())
+
