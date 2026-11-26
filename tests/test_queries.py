@@ -35,9 +35,29 @@ def test_router_blocks_unwhitelisted_function() -> None:
 
 
 def test_interface_app_renders() -> None:
-    """Verify src/interface/app.py renders cleanly without exceptions."""
-    from streamlit.testing.v1 import AppTest
+    """Verify Gradio Blocks app, chat handler, and charts build cleanly."""
+    from src.backend.tools import get_expenses
+    from src.interface.app import create_app, filter_ledger, handle_chat_query
+    from src.interface.charts import (
+        category_distribution_chart,
+        monthly_comparison_chart,
+        monthly_trend_chart,
+        top_categories_chart,
+    )
+    import pandas as pd
 
-    at = AppTest.from_file("src/interface/app.py", default_timeout=15)
-    at.run()
-    assert not at.exception
+    app = create_app()
+    assert app is not None
+
+    _, hist, table, _ = handle_chat_query("Show all my expenses in November.", [])
+    assert len(hist) == 2
+    assert not table.empty
+
+    filtered = filter_ledger("Food", "")
+    assert not filtered.empty
+
+    df = pd.DataFrame(get_expenses())
+    assert category_distribution_chart(df) is not None
+    assert monthly_comparison_chart(df, 10, 11) is not None
+    assert monthly_trend_chart(df) is not None
+    assert top_categories_chart(df) is not None

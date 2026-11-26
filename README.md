@@ -37,7 +37,7 @@ smart-expense-assistant-ml/
 pip install -r requirements.txt
 python -m src.classifier.train
 python -m pytest -v
-streamlit run src/interface/app.py
+python -m src.interface.app
 ```
 
 ## Data Privacy, Security & Licensing
